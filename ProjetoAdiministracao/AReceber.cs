@@ -1,6 +1,6 @@
 namespace ProjetoAdiministracao;
 
- public class AReceber
+ public class AReceber : Geraciamento
  {
     public Int64 IdAReceber;
  }

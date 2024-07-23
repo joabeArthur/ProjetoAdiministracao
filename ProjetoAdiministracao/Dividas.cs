@@ -1,6 +1,6 @@
 namespace ProjetoAdiministracao;
 
-public class Dividas
+public class Dividas : Geraciamento
 {
     public Int64 IdDividas;
 }
