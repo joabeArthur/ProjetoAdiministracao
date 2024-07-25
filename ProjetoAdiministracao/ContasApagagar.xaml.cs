@@ -1,10 +1,11 @@
 using Microsoft.Maui.Controls;
 
-namespace ProjetoAdiministracao
-{
-    public partial class ContasAApagar : ContentPage
+namespace ProjetoAdiministracao;
+
+    public partial class ContasApagagar : ContentPage
     {
-        public ContasAApagar()
+    
+        public ContasApagagar()
         {
             InitializeComponent();
         }
@@ -33,4 +34,5 @@ namespace ProjetoAdiministracao
             DisplayAlert("Delete", "Delete button clicked", "OK");
         }
     }
-}
+    
+

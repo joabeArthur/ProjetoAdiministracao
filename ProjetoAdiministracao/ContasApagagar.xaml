@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjetoAdiministracao.MainPage"
+             x:Class="ProjetoAdiministracao.ContasApagagar"
              BackgroundColor="#2D2D2D">
 
     <Grid>
@@ -58,14 +58,14 @@
                     HeightRequest="50"
                     BackgroundColor="#3F3F3F"
                     TextColor="White"
-                    Clicked="OnOption1ButtonClicked"/>
+                    />
                     
             <Button Text="Opção 2"
                     WidthRequest="200"
                     HeightRequest="50"
                     BackgroundColor="#3F3F3F"
                     TextColor="White"
-                    Clicked="OnOption2ButtonClicked"/>
+                    />
         </StackLayout>
 
         <!-- Footer -->

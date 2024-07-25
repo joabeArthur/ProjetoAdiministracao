@@ -8,9 +8,9 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	public void TrocaDeTela()
+	private void TrocaDeTela(object sender, EventArgs args)
 	{
-		
+		Application.Current.MainPage = new Login();
 	}
 
 }

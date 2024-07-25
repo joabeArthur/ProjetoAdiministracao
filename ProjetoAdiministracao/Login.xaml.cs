@@ -1,7 +1,7 @@
 using Microsoft.Maui.Controls;
 
-namespace ProjetoAdiministracao
-{
+namespace ProjetoAdiministracao;
+
     public partial class Login : ContentPage
     {
         public Login()
@@ -21,4 +21,4 @@ namespace ProjetoAdiministracao
             DisplayAlert("Register", "Register button clicked", "OK");
         }
     }
-}
+
