@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoAdiministracao.SecondPage"
+             BackgroundColor="#404040">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="1"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Spacing="20">
+            <Button Text="CONTAS A PAGAR"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    BackgroundColor="Silver"
+                    TextColor="Black"
+                    Clicked="OnContasAPagarButtonClicked"/>
+
+            <Button Text="DEVEDORES"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    BackgroundColor="Silver"
+                    TextColor="Black"
+                    Clicked="OnDevedoresButtonClicked"/>
+
+            <Button Text="A RECEBER"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    BackgroundColor="Silver"
+                    TextColor="Black"
+                    Clicked="OnAReceberButtonClicked"/>
+        </StackLayout>
+
+        <Image Source="crow.png"
+               Grid.Row="3"
+               VerticalOptions="End"
+               HorizontalOptions="End"
+               HeightRequest="200"
+               WidthRequest="200"
+               Margin="0,0,10,10"/>
+
+        <Button Text="←"
+                Grid.Row="4"
+                VerticalOptions="End"
+                HorizontalOptions="Start"
+                BackgroundColor="Transparent"
+                TextColor="White"
+                Clicked="OnBackButtonClicked"
+                FontSize="30"
+                Margin="10,0,0,10"/>
+    </Grid>
+</ContentPage>

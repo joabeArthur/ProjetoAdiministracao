@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoAdiministracao.MainPage"
+             BackgroundColor="#2D2D2D">
+
+    <Grid>
+        <!-- Define Rows and Columns -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Logo Image -->
+        <Image Source="logo.png"
+               Grid.Row="0"
+               Grid.Column="1"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               HeightRequest="150"
+               WidthRequest="150" />
+
+        <!-- Header Title -->
+        <Label Text="Bem-vindo ao App"
+               Grid.Row="1"
+               Grid.Column="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="White"
+               FontSize="24"
+               FontAttributes="Bold" />
+
+        <!-- Description -->
+        <Label Text="Escolha uma opção para começar"
+               Grid.Row="2"
+               Grid.Column="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="White"
+               FontSize="18" />
+
+        <!-- Buttons -->
+        <StackLayout Grid.Row="3"
+                     Grid.Column="1"
+                     Orientation="Vertical"
+                     HorizontalOptions="Center"
+                     Spacing="15">
+            <Button Text="Opção 1"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    BackgroundColor="#3F3F3F"
+                    TextColor="White"
+                    Clicked="OnOption1ButtonClicked"/>
+                    
+            <Button Text="Opção 2"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    BackgroundColor="#3F3F3F"
+                    TextColor="White"
+                    Clicked="OnOption2ButtonClicked"/>
+        </StackLayout>
+
+        <!-- Footer -->
+        <Label Text="© 2024 Your Company"
+               Grid.Row="4"
+               Grid.Column="1"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               TextColor="White"
+               FontSize="12" />
+    </Grid>
+</ContentPage>
