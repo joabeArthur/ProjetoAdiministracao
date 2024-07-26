@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoAdiministracao.TelaInicial"
+             BackgroundColor="#404040">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Image Source="crow.png"
+               Grid.Row="0"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               HeightRequest="200"
+               WidthRequest="200"/>
+
+        <Label Text="CROW"
+               Grid.Row="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               FontAttributes="Bold"
+               FontSize="24"
+               TextColor="White" />
+
+        <Label Text="Clique em um dos dois para continuar"
+               Grid.Row="2"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="White" />
+
+        <StackLayout Grid.Row="3"
+                     Orientation="Vertical"
+                     HorizontalOptions="Center">
+            <Button Text="FAZER LOGIN"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    BackgroundColor="Silver"
+                    TextColor="Black"
+                    Clicked="OnLoginButtonClicked"/>
+
+            <Button Text="CADASTRAR"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    BackgroundColor="Silver"
+                    TextColor="Black"
+                    Clicked="OnRegisterButtonClicked"
+                    Margin="0,20,0,0"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

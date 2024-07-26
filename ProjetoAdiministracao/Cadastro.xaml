@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoAdiministracao.Cadastro"
+             BackgroundColor="DodgerBlue">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Cadastro" 
+               FontSize="Large"
+               TextColor="White"
+               HorizontalOptions="Center"
+               Margin="0,20,0,20"/>
+        <Entry Placeholder="Email" 
+               x:Name="EmailEntry"
+               WidthRequest="200"/>
+        <Entry Placeholder="Senha" 
+               x:Name="SenhaEntry"
+               IsPassword="True"
+               WidthRequest="200"
+               Margin="0,20,0,0"/>
+        <Entry Placeholder="Confirmar senha" 
+               x:Name="ConfirmarSenhaEntry"
+               IsPassword="True"
+               WidthRequest="200"
+               Margin="0,20,0,20"/>
+        <Button Text="Confirmar" 
+                BackgroundColor="LightSkyBlue"
+                TextColor="Black"
+                WidthRequest="150"
+                HorizontalOptions="Center"
+                Clicked="OnConfirmarClicked"/>
+    </StackLayout>
+</ContentPage>

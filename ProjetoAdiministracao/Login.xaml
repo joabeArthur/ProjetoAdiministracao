@@ -2,55 +2,39 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.Login"
-             BackgroundColor="#404040">
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <Image Source="crow.png"
-               Grid.Row="0"
-               VerticalOptions="Center"
+             BackgroundColor="DodgerBlue">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Login" 
+               FontSize="Large"
+               TextColor="White"
                HorizontalOptions="Center"
-               HeightRequest="200"
-               WidthRequest="200"/>
-
-        <Label Text="CROW"
-               Grid.Row="1"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"
-               FontAttributes="Bold"
-               FontSize="24"
-               TextColor="White" />
-
-        <Label Text="Clique em um dos dois para continuar"
-               Grid.Row="2"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"
-               TextColor="White" />
-
-        <StackLayout Grid.Row="3"
-                     Orientation="Vertical"
-                     HorizontalOptions="Center">
-            <Button Text="FAZER LOGIN"
-                    WidthRequest="200"
-                    HeightRequest="50"
-                    BackgroundColor="Silver"
-                    TextColor="Black"
-                    Clicked="OnLoginButtonClicked"/>
-
-            <Button Text="CADASTRAR"
-                    WidthRequest="200"
-                    HeightRequest="50"
-                    BackgroundColor="Silver"
-                    TextColor="Black"
-                    Clicked="OnRegisterButtonClicked"
-                    Margin="0,20,0,0"/>
+               Margin="0,20,0,20"/>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="Email" 
+                   FontSize="Medium"
+                   TextColor="White"
+                   VerticalOptions="Center"
+                   Margin="0,0,10,0"/>
+            <Entry Placeholder="Email" 
+                   x:Name="EmailEntry"
+                   WidthRequest="200"/>
         </StackLayout>
-    </Grid>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,0,20">
+            <Label Text="Senha" 
+                   FontSize="Medium"
+                   TextColor="White"
+                   VerticalOptions="Center"
+                   Margin="0,0,10,0"/>
+            <Entry Placeholder="Senha" 
+                   x:Name="SenhaEntry"
+                   IsPassword="True"
+                   WidthRequest="200"/>
+        </StackLayout>
+        <Button Text="Confirmar" 
+                BackgroundColor="LightSkyBlue"
+                TextColor="Black"
+                WidthRequest="150"
+                HorizontalOptions="Center"
+                Clicked="OnConfirmarClicked"/>
+    </StackLayout>
 </ContentPage>
