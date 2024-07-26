@@ -2,59 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.Menu"
-             BackgroundColor="#404040">
-
+             BackgroundColor="DodgerBlue">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-        <StackLayout Grid.Row="1"
-                     VerticalOptions="Center"
-                     HorizontalOptions="Center"
-                     Spacing="20">
-            <Button Text="CONTAS A PAGAR"
-                    WidthRequest="200"
-                    HeightRequest="50"
-                    BackgroundColor="Silver"
+        <StackLayout Grid.Column="0" VerticalOptions="Center" Spacing="10">
+            <Button Text="Cadastro de Funcionarios" 
+                    BackgroundColor="LightSkyBlue"
                     TextColor="Black"
-                    Clicked="OnContasAPagarButtonClicked"/>
-
-            <Button Text="DEVEDORES"
-                    WidthRequest="200"
-                    HeightRequest="50"
-                    BackgroundColor="Silver"
+                    Clicked="OnCadastroFuncionariosClicked"/>
+            <Button Text="Funcionarios" 
+                    BackgroundColor="LightSkyBlue"
                     TextColor="Black"
-                    Clicked="OnDevedoresButtonClicked"/>
-
-            <Button Text="A RECEBER"
-                    WidthRequest="200"
-                    HeightRequest="50"
-                    BackgroundColor="Silver"
+                    Clicked="OnFuncionariosClicked"/>
+            <Button Text="Dividas" 
+                    BackgroundColor="LightSkyBlue"
                     TextColor="Black"
-                    Clicked="OnAReceberButtonClicked"/>
+                    Clicked="OnDividasClicked"/>
+            <Button Text="Receber" 
+                    BackgroundColor="LightSkyBlue"
+                    TextColor="Black"
+                    Clicked="OnReceberClicked"/>
+            <Button Text="Pagos" 
+                    BackgroundColor="LightSkyBlue"
+                    TextColor="Black"
+                    Clicked="OnPagosClicked"/>
         </StackLayout>
 
-        <Image Source="crow.png"
-               Grid.Row="3"
-               VerticalOptions="End"
-               HorizontalOptions="End"
-               HeightRequest="200"
-               WidthRequest="200"
-               Margin="0,0,10,10"/>
-
-        <Button Text="←"
-                Grid.Row="4"
-                VerticalOptions="End"
-                HorizontalOptions="Start"
-                BackgroundColor="Transparent"
-                TextColor="White"
-                Clicked="OnBackButtonClicked"
-                FontSize="30"
-                Margin="10,0,0,10"/>
+        <StackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+            <Image Source="caminho/para/sua/imagem.png" WidthRequest="200" HeightRequest="200"/>
+        </StackLayout>
     </Grid>
 </ContentPage>

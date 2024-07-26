@@ -9,28 +9,34 @@ namespace ProjetoAdiministracao
             InitializeComponent();
         }
 
-        private void OnContasAPagarButtonClicked(object sender, EventArgs e)
+        private void OnCadastroFuncionariosClicked(object sender, EventArgs e)
         {
-            // Handle "Contas a Pagar" button click
-            DisplayAlert("Contas a Pagar", "Contas a Pagar button clicked", "OK");
+            // Navegação ou lógica para Cadastro de Funcionarios
+            DisplayAlert("Info", "Cadastro de Funcionarios", "OK");
         }
 
-        private void OnDevedoresButtonClicked(object sender, EventArgs e)
+        private void OnFuncionariosClicked(object sender, EventArgs e)
         {
-            // Handle "Devedores" button click
-            DisplayAlert("Devedores", "Devedores button clicked", "OK");
+            // Navegação ou lógica para Funcionarios
+            DisplayAlert("Info", "Funcionarios", "OK");
         }
 
-        private void OnAReceberButtonClicked(object sender, EventArgs e)
+        private void OnDividasClicked(object sender, EventArgs e)
         {
-            // Handle "A Receber" button click
-            DisplayAlert("A Receber", "A Receber button clicked", "OK");
+            // Navegação ou lógica para Dividas
+            DisplayAlert("Info", "Dividas", "OK");
         }
 
-        private void OnBackButtonClicked(object sender, EventArgs e)
+        private void OnReceberClicked(object sender, EventArgs e)
         {
-            // Handle back button click
-            Navigation.PopAsync();
+            // Navegação ou lógica para Receber
+            DisplayAlert("Info", "Receber", "OK");
+        }
+
+        private void OnPagosClicked(object sender, EventArgs e)
+        {
+            // Navegação ou lógica para Pagos
+            DisplayAlert("Info", "Pagos", "OK");
         }
     }
 }

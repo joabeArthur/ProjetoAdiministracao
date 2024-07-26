@@ -18,9 +18,30 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <Button Clicked="TrocaDeTela"
+        <Button Clicked="Menu"
+                Text="Menu"
+                Grid.Column="0"
+                Grid.Row="0"/>
+        
+        <Button Clicked="Login"
                 Grid.Column="1"
+                Text="Login"
                 Grid.Row="1"/>
+
+        <Button Clicked="Cadastro"
+                Grid.Column="0"
+                Text="Cadastro"
+                Grid.Row="2"/>
+
+        <Button Clicked="ContasApagagar"
+                Grid.Column="1"
+                Text="ContasApagagar"
+                Grid.Row="3"/>
+
+        <Button Clicked="TelaInicial"
+                Grid.Column="0"
+                Text="TelaInicial"
+                Grid.Row="4"/>
      </Grid>
 
 </ContentPage>
