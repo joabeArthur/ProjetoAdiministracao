@@ -1,9 +1,10 @@
 using Microsoft.Maui.Controls;
 
-namespace ProjetoAdiministracao
-{
+namespace ProjetoAdiministracao;
+
     public partial class Dividas : ContentPage
     {
+        public Int64 IdDividas;
         public Dividas()
         {
             InitializeComponent();
@@ -24,4 +25,4 @@ namespace ProjetoAdiministracao
             // Handle the add button click event
         }
     }
-}
+
