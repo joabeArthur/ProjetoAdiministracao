@@ -3,30 +3,63 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.Cadastro"
              BackgroundColor="DodgerBlue">
+
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+     <Grid>
+
+       <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="*"/>
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="Auto"/>
+              <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
+
         <Label Text="Cadastro" 
                FontSize="Large"
                TextColor="White"
                HorizontalOptions="Center"
-               Margin="0,20,0,20"/>
+               Margin="0,20,0,20"
+               Grid.Row="1"
+               Grid.Column="1"/>
+
         <Entry Placeholder="Email" 
                x:Name="EmailEntry"
                WidthRequest="200"/>
+
         <Entry Placeholder="Senha" 
                x:Name="SenhaEntry"
                IsPassword="True"
                WidthRequest="200"
                Margin="0,20,0,0"/>
+
         <Entry Placeholder="Confirmar senha" 
                x:Name="ConfirmarSenhaEntry"
                IsPassword="True"
                WidthRequest="200"
                Margin="0,20,0,20"/>
+
         <Button Text="Confirmar" 
                 BackgroundColor="LightSkyBlue"
                 TextColor="Black"
                 WidthRequest="150"
                 HorizontalOptions="Center"
                 Clicked="OnConfirmarClicked"/>
+
+              <Frame>
+
+              </Frame>
+
+       </Grid>
+
     </StackLayout>
+
 </ContentPage>
