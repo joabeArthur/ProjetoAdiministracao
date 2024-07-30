@@ -33,4 +33,14 @@ public partial class MainPage : ContentPage
 		Application.Current.MainPage = new ContasApagagar();
 	}
 
+	private void Recibo(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new Recibo();
+	}
+
+	private void DicionarDividas(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new DicionarDividas();
+	}
+
 }

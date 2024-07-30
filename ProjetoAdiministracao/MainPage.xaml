@@ -11,6 +11,8 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         
         <Grid.ColumnDefinitions>
@@ -42,6 +44,16 @@
                 Grid.Column="0"
                 Text="TelaInicial"
                 Grid.Row="4"/>
+
+        <Button Clicked="DicionarDividas"
+                Grid.Column="1"
+                Text="DicionarDividas"
+                Grid.Row="5"/>
+
+        <Button Clicked="Recibo"
+                Grid.Column="0"
+                Text="Recibo"
+                Grid.Row="6"/>
      </Grid>
 
 </ContentPage>
