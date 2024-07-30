@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoAdiministracao.CadastroFuncionarios"
+             BackgroundColor="LightSkyBlue">
+    <StackLayout Padding="20" VerticalOptions="Center">
+        
+        <!-- Header Label -->
+        <Label Text="CADASTRO DE FUNCIONARIOS"
+               BackgroundColor="White"
+               HorizontalOptions="Center"
+               Padding="5" />
+
+        <!-- Form -->
+        <Frame BackgroundColor="White" Padding="10" Margin="0,20,0,20">
+            <StackLayout>
+                <!-- Name Entry -->
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Text="Nome:" WidthRequest="100"/>
+                    <Entry x:Name="NameEntry" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <!-- CPF Entry -->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="CPF:" WidthRequest="100"/>
+                    <Entry x:Name="CPFEntry" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <!-- RG Entry -->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="RG:" WidthRequest="100"/>
+                    <Entry x:Name="RGEntry" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <!-- Horario Entry -->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Horario:" WidthRequest="100"/>
+                    <Entry x:Name="HorarioEntry" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <!-- Salario Entry -->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Salario:" WidthRequest="100"/>
+                    <Entry x:Name="SalarioEntry" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                
+                <!-- Buttons -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Margin="0,10,0,0">
+                    <Button Text="🗑️"
+                            BackgroundColor="LightSkyBlue"
+                            Clicked="OnTrashButtonClicked"/>
+                    <Button Text="✔"
+                            BackgroundColor="LightSkyBlue"
+                            Clicked="OnSaveButtonClicked"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+
+        <!-- Bottom Button -->
+        <Button Text="Voltar"
+                BackgroundColor="LightCyan"
+                HorizontalOptions="Center"
+                Clicked="OnVoltarButtonClicked"/>
+        
+    </StackLayout>
+</ContentPage>
