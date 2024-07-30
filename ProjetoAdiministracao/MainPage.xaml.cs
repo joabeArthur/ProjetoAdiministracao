@@ -43,4 +43,14 @@ public partial class MainPage : ContentPage
 		Application.Current.MainPage = new DicionarDividas();
 	}
 
+	private void Funcionarios(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new DicionarDividas();
+	}
+
+	private void CadastroFuncionarios(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new DicionarDividas();
+	}
+
 }
