@@ -1,8 +1,8 @@
 using Microsoft.Maui.Controls;
 using System;
 
-namespace ProjetoAdiministracao
-{
+namespace ProjetoAdiministracao;
+
     public partial class CadastroFuncionarios : ContentPage
     {
         public CadastroFuncionarios()
@@ -32,4 +32,4 @@ namespace ProjetoAdiministracao
             // Add your navigation logic here
         }
     }
-}
+

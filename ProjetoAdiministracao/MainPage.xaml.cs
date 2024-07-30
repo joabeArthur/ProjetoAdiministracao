@@ -45,12 +45,12 @@ public partial class MainPage : ContentPage
 
 	private void Funcionarios(object sender, EventArgs args)
 	{
-		Application.Current.MainPage = new DicionarDividas();
+		Application.Current.MainPage = new Funcionarios();
 	}
 
 	private void CadastroFuncionarios(object sender, EventArgs args)
 	{
-		Application.Current.MainPage = new DicionarDividas();
+		Application.Current.MainPage = new CadastroFuncionarios();
 	}
 
 }
