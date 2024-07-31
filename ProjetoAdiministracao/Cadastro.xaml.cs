@@ -1,7 +1,7 @@
 using Microsoft.Maui.Controls;
 
-namespace ProjetoAdiministracao
-{
+namespace ProjetoAdiministracao;
+
     public partial class Cadastro : ContentPage
     {
         public Cadastro()
@@ -18,12 +18,19 @@ namespace ProjetoAdiministracao
             // Lógica de validação e processamento do cadastro
             if (senha == confirmarSenha)
             {
-                DisplayAlert("Sucesso", "Cadastro realizado com sucesso", "OK");
+                Application.Current.MainPage = new TelaInicial();
             }
             else
             {
-                DisplayAlert("Erro", "As senhas não coincidem", "OK");
+                ErroCadastro.Visible = true;
             }
         }
+
+         
+        private void TentarDeNovo(object sender, EventArgs e)
+        {
+            ErroCadastro.Visible = false;
+
+        }
     }
-}
+

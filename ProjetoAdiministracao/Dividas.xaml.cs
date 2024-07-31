@@ -12,7 +12,10 @@ namespace ProjetoAdiministracao;
 
         private void OnTrashButtonClicked(object sender, EventArgs e)
         {
-            // Handle the trash button click event
+            FrameApagar.Visible = true;
+
+            if (FrameApagar 
+
         }
 
         private void OnVoltarButtonClicked(object sender, EventArgs e)
@@ -24,5 +27,7 @@ namespace ProjetoAdiministracao;
         {
             // Handle the add button click event
         }
+
+       
     }
 

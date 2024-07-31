@@ -20,6 +20,7 @@
        <Grid.ColumnDefinitions>
               <ColumnDefinition Width="*"/>
               <ColumnDefinition Width="Auto"/>
+              <ColumnDefinition Width="Auto"/>
               <ColumnDefinition Width="*"/>
        </Grid.ColumnDefinitions>
 
@@ -54,8 +55,36 @@
                 HorizontalOptions="Center"
                 Clicked="OnConfirmarClicked"/>
 
-              <Frame>
+              <Frame x:Name="ErroCadastro"
+                     IsVisible="false"
+                     Grid.RowSpan="4"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="2">
 
+                     <Grid>
+
+                            <Grid.RowDefinitions>
+                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="Auto"/>
+                                   <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="*"/>
+                                   <ColumnDefinition Width="Auto"/>
+                                   <ColumnDefinition Width="*"/>
+                            <Grid.ColumnDefinitions>
+
+                                   <Label Text="Falha no cadastro tente de novo"
+                                          Grid.Row="1"
+                                          Grid.Column="1"/>
+
+                                   <Button x:Name="BotaoDeCadastro"
+                                           Clicked="TentarDeNovo"
+                                           Text="Tentar de novo"
+                                           Grid.Row="2"
+                                           Grid.Column="1"/>
+                     </Grid>
               </Frame>
 
        </Grid>
