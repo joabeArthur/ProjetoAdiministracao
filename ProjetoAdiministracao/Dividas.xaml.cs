@@ -10,11 +10,11 @@ namespace ProjetoAdiministracao;
             InitializeComponent();
         }
 
-        private void OnTrashButtonClicked(object sender, EventArgs e)
+        private void Apagar(object sender, EventArgs e)
         {
-            FrameApagar.Visible = true;
+            Certeza.IsVisible = true;
 
-            if (FrameApagar 
+            //Application.Current.MainPage = new Recibo();
 
         }
 
@@ -26,6 +26,16 @@ namespace ProjetoAdiministracao;
         private void OnAddButtonClicked(object sender, EventArgs e)
         {
             // Handle the add button click event
+        }
+
+        private void ApagarSIM(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void ApagarNAO(object sender, EventArgs e)
+        {
+            //
         }
 
        

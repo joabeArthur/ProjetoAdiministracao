@@ -39,12 +39,6 @@
                 Grid.Row="2"
                 Margin="30"/>
 
-        <Button Clicked="ContasApagagar"
-                Grid.Column="1"
-                Text="ContasApagagar"
-                Grid.Row="3"
-                Margin="30"/>
-
         <Button Clicked="TelaInicial"
                 Grid.Column="0"
                 Text="TelaInicial"
@@ -55,18 +49,6 @@
                 Grid.Column="1"
                 Text="DicionarDividas"
                 Grid.Row="5"
-                Margin="30"/>
-
-        <Button Clicked="Recibo"
-                Grid.Column="0"
-                Text="Recibo"
-                Grid.Row="6"
-                Margin="30"/>
-
-        <Button Clicked="Funcionarios"
-                Grid.Column="2"
-                Text="Funcionarios"
-                Grid.Row="3"
                 Margin="30"/>
         
         <Button Clicked="CadastroFuncionarios"

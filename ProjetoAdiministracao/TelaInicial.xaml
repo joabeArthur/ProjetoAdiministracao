@@ -28,12 +28,6 @@
                FontSize="24"
                TextColor="White" />
 
-        <Label Text="Clique em um dos dois para continuar"
-               Grid.Row="2"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"
-               TextColor="White" />
-
         <StackLayout Grid.Row="3"
                      Orientation="Vertical"
                      HorizontalOptions="Center">

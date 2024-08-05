@@ -4,33 +4,16 @@
              x:Class="ProjetoAdiministracao.Cadastro"
              BackgroundColor="DodgerBlue">
 
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    <StackLayout HorizontalOptions="Center" 
+                 VerticalOptions="Center">
 
-     <Grid>
-
-       <Grid.RowDefinitions>
-              <RowDefinition Height="*"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="*"/>
-       </Grid.RowDefinitions>
-
-       <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="*"/>
-              <ColumnDefinition Width="Auto"/>
-              <ColumnDefinition Width="Auto"/>
-              <ColumnDefinition Width="*"/>
-       </Grid.ColumnDefinitions>
+     
 
         <Label Text="Cadastro" 
                FontSize="Large"
                TextColor="White"
                HorizontalOptions="Center"
-               Margin="0,20,0,20"
-               Grid.Row="1"
-               Grid.Column="1"/>
+               Margin="0,20,0,20"/>
 
         <Entry Placeholder="Email" 
                x:Name="EmailEntry"
@@ -57,9 +40,7 @@
 
               <Frame x:Name="ErroCadastro"
                      IsVisible="false"
-                     Grid.RowSpan="4"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2">
+                     Grid.RowSpan="4">
 
                      <Grid>
 
@@ -73,7 +54,7 @@
                                    <ColumnDefinition Width="*"/>
                                    <ColumnDefinition Width="Auto"/>
                                    <ColumnDefinition Width="*"/>
-                            <Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
                                    <Label Text="Falha no cadastro tente de novo"
                                           Grid.Row="1"
@@ -86,8 +67,6 @@
                                            Grid.Column="1"/>
                      </Grid>
               </Frame>
-
-       </Grid>
 
     </StackLayout>
 

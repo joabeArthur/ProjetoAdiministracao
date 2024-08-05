@@ -22,14 +22,14 @@ namespace ProjetoAdiministracao;
             }
             else
             {
-                ErroCadastro.Visible = true;
+                ErroCadastro.IsVisible = true;
             }
         }
 
          
         private void TentarDeNovo(object sender, EventArgs e)
         {
-            ErroCadastro.Visible = false;
+            ErroCadastro.IsVisible = false;
 
         }
     }

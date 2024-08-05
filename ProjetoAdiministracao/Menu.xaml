@@ -3,37 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.Menu"
              BackgroundColor="DodgerBlue">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-        <StackLayout Grid.Column="0" VerticalOptions="Center" Spacing="10">
-            <Button Text="Cadastro de Funcionarios" 
-                    BackgroundColor="LightSkyBlue"
-                    TextColor="Black"
-                    Clicked="OnCadastroFuncionariosClicked"/>
-            <Button Text="Funcionarios" 
-                    BackgroundColor="LightSkyBlue"
-                    TextColor="Black"
-                    Clicked="OnFuncionariosClicked"/>
-            <Button Text="Dividas" 
-                    BackgroundColor="LightSkyBlue"
-                    TextColor="Black"
-                    Clicked="OnDividasClicked"/>
-            <Button Text="Receber" 
-                    BackgroundColor="LightSkyBlue"
-                    TextColor="Black"
-                    Clicked="OnReceberClicked"/>
-            <Button Text="Pagos" 
-                    BackgroundColor="LightSkyBlue"
-                    TextColor="Black"
-                    Clicked="OnPagosClicked"/>
-        </StackLayout>
+                <StackLayout Grid.Column="1"
+                                VerticalOptions="Center"
+                                Spacing="10">
 
-        <StackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
-            <Image Source="caminho/para/sua/imagem.png" WidthRequest="200" HeightRequest="200"/>
-        </StackLayout>
-    </Grid>
+                        <Button Text="Funcionarios"
+                                BackgroundColor="LightSkyBlue"
+                                TextColor="Black"
+                                Clicked="Funcionarios"/>
+
+                        <Button Text="Dividas"
+                                BackgroundColor="LightSkyBlue"
+                                TextColor="Black"
+                                Clicked="Dividas"/>
+
+                        <Button Text="Recibo"
+                                BackgroundColor="LightSkyBlue"
+                                TextColor="Black"
+                                Clicked="Recibo"/>
+
+                </StackLayout>
+
+             <!--   <StackLayout Grid.Column="1"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center">
+
+                        <Image Source="caminho/para/sua/imagem.png"
+                                        WidthRequest="200"
+                                        HeightRequest="200"/>
+                </StackLayout> -->
+        </Grid>
 </ContentPage>

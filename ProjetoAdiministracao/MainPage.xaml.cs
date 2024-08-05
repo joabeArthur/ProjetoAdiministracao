@@ -28,24 +28,9 @@ public partial class MainPage : ContentPage
 		Application.Current.MainPage = new Cadastro();
 	}
 
-	private void ContasApagagar(object sender, EventArgs args)
-	{
-		Application.Current.MainPage = new ContasApagagar();
-	}
-
-	private void Recibo(object sender, EventArgs args)
-	{
-		Application.Current.MainPage = new Recibo();
-	}
-
 	private void DicionarDividas(object sender, EventArgs args)
 	{
 		Application.Current.MainPage = new DicionarDividas();
-	}
-
-	private void Funcionarios(object sender, EventArgs args)
-	{
-		Application.Current.MainPage = new Funcionarios();
 	}
 
 	private void CadastroFuncionarios(object sender, EventArgs args)

@@ -9,34 +9,20 @@ namespace ProjetoAdiministracao
             InitializeComponent();
         }
 
-        private void OnCadastroFuncionariosClicked(object sender, EventArgs e)
-        {
-            // Navegação ou lógica para Cadastro de Funcionarios
-            DisplayAlert("Info", "Cadastro de Funcionarios", "OK");
-        }
+        private void Dividas(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new Dividas();
+	}
 
-        private void OnFuncionariosClicked(object sender, EventArgs e)
-        {
-            // Navegação ou lógica para Funcionarios
-            DisplayAlert("Info", "Funcionarios", "OK");
-        }
+	private void Recibo(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new Recibo();
+	}
 
-        private void OnDividasClicked(object sender, EventArgs e)
-        {
-            // Navegação ou lógica para Dividas
-            DisplayAlert("Info", "Dividas", "OK");
-        }
-
-        private void OnReceberClicked(object sender, EventArgs e)
-        {
-            // Navegação ou lógica para Receber
-            DisplayAlert("Info", "Receber", "OK");
-        }
-
-        private void OnPagosClicked(object sender, EventArgs e)
-        {
-            // Navegação ou lógica para Pagos
-            DisplayAlert("Info", "Pagos", "OK");
-        }
+    private void Funcionarios(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new Funcionarios();
+	}
+    
     }
 }
