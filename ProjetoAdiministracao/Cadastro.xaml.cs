@@ -9,20 +9,20 @@ namespace ProjetoAdiministracao;
             InitializeComponent();
         }
 
-        private void OnConfirmarClicked(object sender, EventArgs e)
+        private void Confirmar(object sender, EventArgs e)
         {
             string email = EmailEntry.Text;
             string senha = SenhaEntry.Text;
-            string confirmarSenha = ConfirmarSenhaEntry.Text;
+            string confirmarSenha = ConfirmarSenha.Text;
 
             // Lógica de validação e processamento do cadastro
-            if (senha == confirmarSenha)
+            if (senha == null || confirmarSenha == null || email == null || senha == confirmarSenha)
             {
-                Application.Current.MainPage = new TelaInicial();
+                ErroCadastro.IsVisible = true;
             }
             else
             {
-                ErroCadastro.IsVisible = true;
+                Application.Current.MainPage = new Menu();
             }
         }
 

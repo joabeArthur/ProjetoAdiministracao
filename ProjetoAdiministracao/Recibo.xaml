@@ -9,17 +9,18 @@
                      HorizontalOptions="Start"
                      WidthRequest="200">
             <Label Text="Quando se exclui uma divida ela acaba vindo parar aqui"
-                   BackgroundColor="White"
+                   BackgroundColor="Green"
                    Padding="5"
                    HorizontalOptions="Center"/>
             <Button Text="Recibos"
-                    BackgroundColor="White"
+                    BackgroundColor="Green"
                     Margin="0,20,0,0"
                     HorizontalOptions="Center"/>
             <Button Text="Voltar"
-                    BackgroundColor="LightCyan"
+                    BackgroundColor="Cyan"
                     Margin="0,20,0,0"
-                    HorizontalOptions="Center"/>
+                    HorizontalOptions="Center"
+                    Clicked="Voltar"/>
         </StackLayout>
 
         <!-- Right Side Content -->
@@ -71,7 +72,7 @@
                     <Button Text="🗑️"
                             HorizontalOptions="End"
                             BackgroundColor="LightSkyBlue"
-                            Clicked="OnTrashButtonClicked"/>
+                            Clicked="Apagar"/>
                 </StackLayout>
             </Frame>
 

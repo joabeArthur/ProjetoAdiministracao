@@ -23,6 +23,10 @@ namespace ProjetoAdiministracao
 	{
 		Application.Current.MainPage = new Funcionarios();
 	}
+	private void CadastroFuncionarios(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new CadastroFuncionarios();
+	}
     
     }
 }

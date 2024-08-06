@@ -12,20 +12,20 @@ namespace ProjetoAdiministracao;
 
         private void Apagar(object sender, EventArgs e)
         {
-            Certeza.IsVisible = true;
+            FrameApagar.IsVisible = true;
 
             //Application.Current.MainPage = new Recibo();
 
         }
 
-        private void OnVoltarButtonClicked(object sender, EventArgs e)
+        private void Voltar(object sender, EventArgs e)
         {
-            // Handle the Voltar button click event
+            Application.Current.MainPage = new Menu();
         }
 
-        private void OnAddButtonClicked(object sender, EventArgs e)
+        private void Adicionar(object sender, EventArgs e)
         {
-            // Handle the add button click event
+            Application.Current.MainPage = new DicionarDividas();
         }
 
         private void ApagarSIM(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace ProjetoAdiministracao;
 
         private void ApagarNAO(object sender, EventArgs e)
         {
-            //
+            FrameApagar.IsVisible = false;
         }
 
        

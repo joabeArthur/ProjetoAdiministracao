@@ -35,6 +35,6 @@
                 TextColor="Black"
                 WidthRequest="150"
                 HorizontalOptions="Center"
-                Clicked="OnConfirmarClicked"/>
+                Clicked="Comfirmar"/>
     </StackLayout>
 </ContentPage>

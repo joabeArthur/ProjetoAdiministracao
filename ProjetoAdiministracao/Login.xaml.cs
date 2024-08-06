@@ -9,7 +9,7 @@ namespace ProjetoAdiministracao
             InitializeComponent();
         }
 
-        private void OnConfirmarClicked(object sender, EventArgs e)
+        private void Comfirmar(object sender, EventArgs e)
         {
             string email = EmailEntry.Text;
             string senha = SenhaEntry.Text;
@@ -17,7 +17,7 @@ namespace ProjetoAdiministracao
             // Lógica de validação e processamento do login
             if (IsValidLogin(email, senha))
             {
-                DisplayAlert("Sucesso", "Login realizado com sucesso", "OK");
+                Application.Current.MainPage = new Menu();
             }
             else
             {

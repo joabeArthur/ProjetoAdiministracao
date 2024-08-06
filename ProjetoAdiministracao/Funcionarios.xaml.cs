@@ -10,14 +10,14 @@ namespace ProjetoAdiministracao
             InitializeComponent();
         }
 
-        private void OnTrashButtonClicked(object sender, EventArgs e)
+        private void Apagar(object sender, EventArgs e)
         {
-            // Handle the trash button click event
+            // 
         }
 
-        private void OnVoltarButtonClicked(object sender, EventArgs e)
+        private void Voltar(object sender, EventArgs e)
         {
-            // Handle the Voltar button click event
+            Application.Current.MainPage = new Menu();
         }
     }
 }

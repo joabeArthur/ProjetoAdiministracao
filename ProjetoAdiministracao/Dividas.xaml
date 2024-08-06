@@ -79,7 +79,8 @@
 
         
 
-        <Frame x:Name="FrameApagar">
+        <Frame x:Name="FrameApagar"
+               IsVisible="false">
 
               <Grid>
 
@@ -103,13 +104,13 @@
                     Clicked="ApagarSIM"
                     Text="Sim"
                     Grid.Row="1"
-                    Grid.Column="1"/>
+                    Grid.Column="0"/>
 
             <Button x:Name="NomeApagarNao"
                     Clicked="ApagarNAO"
                     Text="Não"
                     Grid.Row="1"
-                    Grid.Column="1"/>
+                    Grid.Column="2"/>
 
               </Grid>
 
@@ -121,10 +122,12 @@
                      Spacing="20">
 
             <Button Text="Voltar" 
-                    BackgroundColor="LightCyan"/>
+                    BackgroundColor="Cyan"
+                    Clicked="Voltar"/>
 
             <Button Text="+" 
-                    BackgroundColor="LightSkyBlue"/>
+                    BackgroundColor="Blue"
+                    Clicked="Adicionar"/>
 
         </StackLayout>
         

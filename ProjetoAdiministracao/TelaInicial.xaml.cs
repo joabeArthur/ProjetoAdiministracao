@@ -9,16 +9,14 @@ namespace ProjetoAdiministracao;
             InitializeComponent();
         }
 
-        private void OnLoginButtonClicked(object sender, EventArgs e)
+        private void Login(object sender, EventArgs e)
         {
-            // Handle login button click
-            DisplayAlert("Login", "Login button clicked", "OK");
+            Application.Current.MainPage = new Login();
         }
 
-        private void OnRegisterButtonClicked(object sender, EventArgs e)
+        private void Cadastro(object sender, EventArgs e)
         {
-            // Handle register button click
-            DisplayAlert("Register", "Register button clicked", "OK");
+            Application.Current.MainPage = new Cadastro();
         }
     }
 
