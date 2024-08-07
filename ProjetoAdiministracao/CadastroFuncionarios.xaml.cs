@@ -1,16 +1,24 @@
 using Microsoft.Maui.Controls;
 using System;
+using System.Collections.Generic;
+
 
 namespace ProjetoAdiministracao;
 
     public partial class CadastroFuncionarios : ContentPage
     {
+
+        public string name;
+        public string CPF;
+        public string RG;
+        public string horario;
+        public string salario;
         public CadastroFuncionarios()
         {
             InitializeComponent();
         }
 
-        private void OnTrashButtonClicked(object sender, EventArgs e)
+        private void Apagar(object sender, EventArgs e)
         {
             // Handle the trash button click event
             NameEntry.Text = string.Empty;
@@ -18,18 +26,33 @@ namespace ProjetoAdiministracao;
             RGEntry.Text = string.Empty;
             HorarioEntry.Text = string.Empty;
             SalarioEntry.Text = string.Empty;
+            
         }
 
-        private void OnSaveButtonClicked(object sender, EventArgs e)
+        public void CadastroFuncionariosSalvar()
         {
-            // Handle the save button click event
-            // Add your save logic here
+            this.name = NameEntry.Text;
+            this.CPF = CPFEntry.Text;
+            this.RG = RGEntry.Text;
+            this.horario = HorarioEntry.Text;
+            this.salario = SalarioEntry.Text;
+
+            if (name == null || CPF == null || RG == null || horario == null || salario == null)
+            {
+                FrameErro.IsVisible = true;
+            } 
+
+
         }
 
-        private void OnVoltarButtonClicked(object sender, EventArgs e)
+        private void TentarDeNovo(object sender, EventArgs e)
         {
-            // Handle the Voltar button click event
-            // Add your navigation logic here
+            FrameErro.IsVisible = false;
+        }
+
+        private void Voltar(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new Menu();
         }
     }
 

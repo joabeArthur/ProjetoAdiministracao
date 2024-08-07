@@ -16,7 +16,7 @@ namespace ProjetoAdiministracao;
             string confirmarSenha = ConfirmarSenha.Text;
 
             // Lógica de validação e processamento do cadastro
-            if (senha == null || confirmarSenha == null || email == null || senha == confirmarSenha)
+            if (senha == null || confirmarSenha == null || email == null)
             {
                 ErroCadastro.IsVisible = true;
             }
