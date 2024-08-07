@@ -35,14 +35,25 @@ namespace ProjetoAdiministracao;
             this.CPF = CPFEntry.Text;
             this.RG = RGEntry.Text;
             this.horario = HorarioEntry.Text;
+            this.salario = SalarioEntry.Text; 
+        }
+
+        private void Salvar(object sender, EventArgs e)
+        {
+            this.name = NameEntry.Text;
+            this.CPF = CPFEntry.Text;
+            this.RG = RGEntry.Text;
+            this.horario = HorarioEntry.Text;
             this.salario = SalarioEntry.Text;
 
             if (name == null || CPF == null || RG == null || horario == null || salario == null)
             {
                 FrameErro.IsVisible = true;
             } 
-
-
+            else
+            {
+                Application.Current.MainPage = new Funcionarios();
+            }
         }
 
         private void TentarDeNovo(object sender, EventArgs e)

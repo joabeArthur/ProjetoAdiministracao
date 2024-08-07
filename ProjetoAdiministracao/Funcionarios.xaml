@@ -67,7 +67,8 @@
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Salario:"
                             WidthRequest="100"/>
-                    <Entry x:Name="SalaryEntry"
+                    <Label x:Name="SalaryEntry"
+                           Text=""
                             HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
 

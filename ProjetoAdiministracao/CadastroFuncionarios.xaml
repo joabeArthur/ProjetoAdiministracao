@@ -68,7 +68,7 @@
                             Clicked="Apagar"/>
                     <Button Text="✔"
                             BackgroundColor="SkyBlue"
-                            Clicked="CadastroFuncionariosSalvar"/>
+                            Clicked="Salvar"/>
                 </StackLayout>
             </StackLayout>
         </Frame>

@@ -25,11 +25,11 @@ namespace ProjetoAdiministracao;
         {
             cf.CadastroFuncionariosSalvar();
 
-            cf.name = NameEntry.Text;
-            cf.CPF = CPFEntry.Text;
-            cf.RG = RGEntry.Text;
-            cf.horario = WorkHoursEntry.Text;
-            cf.salario = SalaryEntry.Text;
+            NameEntry.Text = cf.name.ToLower();
+            CPFEntry.Text = cf.CPF.ToUpper();
+            RGEntry.Text = cf.RG;
+            WorkHoursEntry.Text = cf.horario;
+            SalaryEntry.Text = cf.salario;
         }
 
         private void Voltar(object sender, EventArgs e)
