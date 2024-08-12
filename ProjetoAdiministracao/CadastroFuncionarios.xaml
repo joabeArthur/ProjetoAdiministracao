@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.CadastroFuncionarios"
              BackgroundColor="LightSkyBlue">
+
+<ContentView>
     <StackLayout Padding="20"
             VerticalOptions="Center">
 
@@ -74,32 +76,23 @@
         </Frame>
 
         <Frame x:Name="FrameErro"
-                     IsVisible="false">
+               IsVisible="false"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand">
 
-                     <Grid>
+               <StackLayout>
 
-                            <Grid.RowDefinitions>
-                                   <RowDefinition Height="*"/>
-                                   <RowDefinition Height="Auto"/>
-                                   <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
+                     <Label Text="Falha no salvamento tente de novo"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Center"/>
 
-                            <Grid.ColumnDefinitions>
-                                   <ColumnDefinition Width="*"/>
-                                   <ColumnDefinition Width="Auto"/>
-                                   <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
+                     <Button x:Name="BotaoDeCadastro"
+                             Clicked="TentarDeNovo"
+                             Text="Tentar de novo"
+                             VerticalOptions="End"
+                             HorizontalOptions="Center"/>
 
-                                   <Label Text="Falha no salvamento tente de novo"
-                                          Grid.Row="1"
-                                          Grid.Column="1"/>
-
-                                   <Button x:Name="BotaoDeCadastro"
-                                           Clicked="TentarDeNovo"
-                                           Text="Tentar de novo"
-                                           Grid.Row="2"
-                                           Grid.Column="1"/>
-                     </Grid>
+                </StackLayout>
               </Frame>
 
         <!-- Bottom Button -->
@@ -109,4 +102,5 @@
                 Clicked="Voltar"/>
 
     </StackLayout>
+</ContentView>
 </ContentPage>
