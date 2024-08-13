@@ -1,10 +1,12 @@
 using LiteDB;
 using LiteDBExample.Modelos;
 
-namespace Controles;
+namespace ProjetoAdiministracao;
 
 public class BaseControle
 {
+  CadastroFuncionarios cf;
+
   //----------------------------------------------------------------------------
 
   protected string NomeDaTabela;
@@ -24,6 +26,7 @@ public class BaseControle
 
   public virtual void CriarOuAtualizar(Registro r)
   {
+    
   }
   
   //----------------------------------------------------------------------------
@@ -47,4 +50,8 @@ public class BaseControle
   }
 
   //----------------------------------------------------------------------------
+}
+
+internal class cf
+{
 }

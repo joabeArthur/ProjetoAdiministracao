@@ -1,3 +1,4 @@
+using LiteDBExample.Modelos;
 using Microsoft.Maui.Controls;
 using System;
 using System.Collections.Generic;
@@ -7,15 +8,11 @@ namespace ProjetoAdiministracao;
 
     public partial class CadastroFuncionarios : ContentPage
     {
-
-        public string name;
-        public string CPF;
-        public string RG;
-        public string horario;
-        public string salario;
+        Cliente cliente;
         public CadastroFuncionarios()
         {
             InitializeComponent();
+             cliente = new Cliente();
         }
 
         private void Apagar(object sender, EventArgs e)
@@ -29,24 +26,15 @@ namespace ProjetoAdiministracao;
             
         }
 
-        public void CadastroFuncionariosSalvar()
+        public void Salvar(object sender, EventArgs e)
         {
-            this.name = NameEntry.Text;
-            this.CPF = CPFEntry.Text;
-            this.RG = RGEntry.Text;
-            this.horario = HorarioEntry.Text;
-            this.salario = SalarioEntry.Text; 
-        }
+             cliente.Nome = NameEntry.Text;
+             cliente.CPF = CPFEntry.Text;
+             cliente.RG = RGEntry.Text;
+             cliente.Horario = HorarioEntry.Text;
+             cliente.Salario = SalarioEntry.Text;
 
-        private void Salvar(object sender, EventArgs e)
-        {
-            this.name = NameEntry.Text;
-            this.CPF = CPFEntry.Text;
-            this.RG = RGEntry.Text;
-            this.horario = HorarioEntry.Text;
-            this.salario = SalarioEntry.Text;
-
-            if (name == null || CPF == null || RG == null || horario == null || salario == null)
+            if (cliente.Nome == null || cliente.CPF == null || cliente.RG == null || cliente.Horario == null || cliente.Salario == null)
             {
                 FrameErro.IsVisible = true;
             } 
