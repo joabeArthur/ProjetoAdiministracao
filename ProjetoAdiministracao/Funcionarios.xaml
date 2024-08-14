@@ -17,6 +17,17 @@
                 Padding="10"
                 Margin="0,20,0,20">
             <StackLayout>
+
+                <Label Text="Id:"
+                       HorizontalOptions="FillAndExpand"/>
+
+                <Label x:Name="IdEntry"
+                       
+                       FontSize="15"
+                       BackgroundColor="White"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End"/>
+
                 <!-- Employee Name -->
                 <Label Text="Name:"
                        HorizontalOptions="FillAndExpand"/>
@@ -90,10 +101,7 @@
                         BackgroundColor="SkyBlue"
                         Clicked="Apagar"/>
 
-                <Button Text="jjjjjj"
-                        HorizontalOptions="End"
-                        BackgroundColor="SkyBlue"
-                        Clicked="Registrar"/>
+                
             </StackLayout>
         </Frame>
 

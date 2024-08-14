@@ -8,11 +8,13 @@ namespace ProjetoAdiministracao;
     {   
         CadastroFuncionarios cf;
         Cliente cliente;
+        ClienteControle clienteControle;
         public Funcionarios()
         {
             InitializeComponent();
             cf = new CadastroFuncionarios();
             cliente = new Cliente();
+            clienteControle = new ClienteControle();
         }
 
         private void Apagar(object sender, EventArgs e)
@@ -24,13 +26,21 @@ namespace ProjetoAdiministracao;
             SalaryEntry.Text = string.Empty;
         }
                                       
-        private void Registrar(object sender, EventArgs e)
+        public void Registrar()
         {
+            base.OnAppearing();
+
+           clienteControle.Ler(cliente.Id);
+           
+
+           IdEntry.Text = cliente.Id.ToString();
            cliente.Nome = NameEntry.Text;
            cliente.CPF = CPFEntry.Text;
            cliente.RG = RGEntry.Text;
            cliente.Horario = WorkHoursEntry.Text;
            cliente.Salario = SalaryEntry.Text;
+
+           
         }
 
         private void Voltar(object sender, EventArgs e)
