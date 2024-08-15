@@ -3,113 +3,109 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.Funcionarios"
              BackgroundColor="LightSkyBlue">
-    <StackLayout Padding="20"
-            VerticalOptions="Center">
+       <StackLayout Padding="20"
+                    VerticalOptions="Center">
 
-        <!-- Header Label -->
-        <Label Text="FUNCIONARIOS"
-               BackgroundColor="White"
-               HorizontalOptions="Center"
-               Padding="5"/>
+              <ScrollView>
+                     <VerticalStackLayout>
 
-        <!-- Form -->
-        <Frame BackgroundColor="White"
-                Padding="10"
-                Margin="0,20,0,20">
-            <StackLayout>
+                            <!-- Header Label -->
+                            <Label Text="FUNCIONARIOS"
+                                   BackgroundColor="White"
+                                   HorizontalOptions="Center"
+                                   Padding="5"/>
 
-                <Label Text="Id:"
-                       HorizontalOptions="FillAndExpand"/>
+                            <!-- Form -->
+                            <Frame BackgroundColor="White"
+                                   Padding="10"
+                                   Margin="0,20,0,20"
+                                   HorizontalOptions="StartAndExpand">
+                                   <StackLayout>
 
-                <Label x:Name="IdEntry"
-                       
-                       FontSize="15"
-                       BackgroundColor="White"
-                       HorizontalOptions="Center"
-                       VerticalOptions="End"/>
+                                          <Label Text="Id:"
+                                                 HorizontalOptions="FillAndExpand"/>
+                                          <Label x:Name="IdLabel"
+                                                 FontSize="15"
+                                                 BackgroundColor="White"
+                                                 HorizontalOptions="Center"
+                                                 VerticalOptions="End"/>
 
-                <!-- Employee Name -->
-                <Label Text="Name:"
-                       HorizontalOptions="FillAndExpand"/>
 
-                <Label x:Name="NameEntry"
-                       Text=""
-                       FontSize="30"
-                       BackgroundColor="White"
-                       HorizontalOptions="Center"
-                       VerticalOptions="End"/>
+                                          <Label Text="Name:"
+                                                 HorizontalOptions="FillAndExpand"/>
 
-                <!-- CPF Entry -->
-                <StackLayout Orientation="Horizontal"
-                        Margin="0,10,0,0">
-                    <Label Text="CPF:"
-                            WidthRequest="100"/>
-                    <Label x:Name="CPFEntry"
-                            Text=""
-                            FontSize="30"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="Center"/>
-                </StackLayout>
+                                          <Label x:Name="NomeLabel"
+                                                 Text="{Binding Nome}"
+                                                 FontSize="30"
+                                                 BackgroundColor="White"
+                                                 HorizontalOptions="Center"
+                                                 VerticalOptions="End"/>
 
-                <!-- RG Entry -->
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="RG:"
-                            WidthRequest="100"/>
-                    <Label x:Name="RGEntry"
-                            Text=""
-                            FontSize="30"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="Start"/>
-                </StackLayout>
 
-                <!-- Work Hours Entry -->
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Das:"
-                            WidthRequest="100"/>
-                    <Label x:Name="WorkHoursEntry"
-                            Text=""
-                            FontSize="30"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="Start"/>
-                </StackLayout>
 
-                <!-- Function Entry -->
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Função:"
-                            WidthRequest="100"/>
-                    <Label x:Name="FunctionEntry"
-                            Text="" 
-                            FontSize="30"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="Start"/>
-                </StackLayout>
+                                          <Label Text="CPF:"
+                                                 WidthRequest="100"
+                                                 HorizontalOptions="StartAndExpand"/>
+                                          <Label x:Name="CPFLabel"
+                                                 Text="{Binding CPF}"
+                                                 FontSize="30"
+                                                 HorizontalOptions="StartAndExpand"
+                                                 VerticalOptions="Center"/>
 
-                <!-- Salary Entry -->
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Salario:"
-                            WidthRequest="100"/>
-                    <Label x:Name="SalaryEntry"
-                           Text=""
-                           FontSize="30"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="Start"/>
-                </StackLayout>
+                                          <Label Text="RG:"
+                                                 WidthRequest="100"
+                                                 HorizontalOptions="StartAndExpand"/>
+                                          <Label x:Name="RGLabel"
+                                                 Text="{Binding RG}"
+                                                 FontSize="30"
+                                                 HorizontalOptions="StartAndExpand"
+                                                 VerticalOptions="Start"/>
 
-                <!-- Trash Button -->
-                <Button Text="🗑️"
-                        HorizontalOptions="End"
-                        BackgroundColor="SkyBlue"
-                        Clicked="Apagar"/>
 
-                
-            </StackLayout>
-        </Frame>
 
-        <!-- Bottom Button -->
-        <Button Text="Voltar"
-                BackgroundColor="Cyan"
-                HorizontalOptions="Center"
-                Clicked="Voltar"/>
+                                          <Label Text="Das:"
+                                                 WidthRequest="100"
+                                                 HorizontalOptions="StartAndExpand"/>
+                                          <Label x:Name="HorarioLabel"
+                                                 Text="{Binding Horario}"
+                                                 FontSize="30"
+                                                 HorizontalOptions="StartAndExpand"
+                                                 VerticalOptions="Start"/>
 
-    </StackLayout>
+                                          <Label Text="Salario:"
+                                                 WidthRequest="100"
+                                                 HorizontalOptions="StartAndExpand"/>
+                                          <Label x:Name="SalarioLabel"
+                                                 Text="{Binding Salario}"
+                                                 FontSize="30"
+                                                 HorizontalOptions="StartAndExpand"
+                                                 VerticalOptions="Start"/>
+
+
+                                          <Button Text="🗑️"
+                                                  HorizontalOptions="End"
+                                                  BackgroundColor="SkyBlue"
+                                                  Clicked="Apagar"/>
+
+                                   </StackLayout>
+
+                            </Frame>
+                            
+                            
+
+                            <!-- Bottom Button -->
+                            <Button Text="Voltar"
+                                    BackgroundColor="Cyan"
+                                    HorizontalOptions="Center"
+                                    Clicked="Voltar"/>
+
+                            <Button Text="Registrar"
+                                                  HorizontalOptions="End"
+                                                  BackgroundColor="SkyBlue"
+                                                  Clicked="Registrar"/>
+
+                     </VerticalStackLayout>
+
+              </ScrollView>
+       </StackLayout> 
 </ContentPage>

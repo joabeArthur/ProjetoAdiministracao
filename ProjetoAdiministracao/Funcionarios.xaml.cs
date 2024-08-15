@@ -19,26 +19,24 @@ namespace ProjetoAdiministracao;
 
         private void Apagar(object sender, EventArgs e)
         {
-            NameEntry.Text = string.Empty;
-            CPFEntry.Text = string.Empty;
-            RGEntry.Text = string.Empty;
-            WorkHoursEntry.Text = string.Empty;
-            SalaryEntry.Text = string.Empty;
+            NomeLabel.Text = string.Empty;
+            CPFLabel.Text = string.Empty;
+            RGLabel.Text = string.Empty;
+            HorarioLabel.Text = string.Empty;
+            SalarioLabel.Text = string.Empty;
         }
                                       
-        public void Registrar()
+        public void Registrar(object sender, EventArgs e)
         {
-            base.OnAppearing();
-
            clienteControle.Ler(cliente.Id);
            
 
-           IdEntry.Text = cliente.Id.ToString();
-           cliente.Nome = NameEntry.Text;
-           cliente.CPF = CPFEntry.Text;
-           cliente.RG = RGEntry.Text;
-           cliente.Horario = WorkHoursEntry.Text;
-           cliente.Salario = SalaryEntry.Text;
+           IdLabel.Text = cliente.Id.ToString();
+           cliente.Nome = NomeLabel.Text;
+           cliente.CPF = CPFLabel.Text;
+           cliente.RG = RGLabel.Text;
+           cliente.Horario = HorarioLabel.Text;
+           cliente.Salario = SalarioLabel.Text;
 
            
         }
