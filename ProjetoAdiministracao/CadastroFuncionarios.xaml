@@ -4,114 +4,113 @@
              x:Class="ProjetoAdiministracao.CadastroFuncionarios"
              BackgroundColor="LightSkyBlue">
 
-<ContentView>
-    <StackLayout Padding="20"
-            VerticalOptions="Center">
+        <ContentView>
+                <StackLayout Padding="20"
+                             VerticalOptions="Center">
 
-        <!-- Header Label -->
-        <Label Text="CADASTRO DE FUNCIONARIOS"
-               BackgroundColor="White"
-               HorizontalOptions="Center"
-               Padding="5"/>
+                     
+                        <Label Text="CADASTRO DE FUNCIONARIOS"
+                               BackgroundColor="White"
+                               HorizontalOptions="Center"
+                               Padding="5"/>
 
-        <!-- Form -->
-        <Frame BackgroundColor="White"
-                Padding="10"
-                Margin="0,20,0,20">
-            <StackLayout>
+                  
+                        <Frame BackgroundColor="White"
+                               Padding="10"
+                               Margin="0,20,0,20">
+                                <StackLayout>
 
-                <StackLayout Orientation="Horizontal"
-                        Margin="0,10,0,0">
-                    <Label  x:Name="IdLabel"
-                            Text="Id:"
-                            WidthRequest="100"/>
-                    <Entry x:Name="IdEntry"
-                            HorizontalOptions="FillAndExpand"/>
+                                        <StackLayout Orientation="Horizontal"
+                                                     Margin="0,10,0,0">
+                                                <Label  x:Name="IdLabel"
+                                                        Text="Id:"
+                                                        WidthRequest="100"/>
+                                        </StackLayout>
+
+                                     
+                                        <StackLayout Orientation="Horizontal"
+                                                     Margin="0,10,0,0">
+                                                <Label Text="Nome:"
+                                                       WidthRequest="100"/>
+                                                <Entry x:Name="NameEntry"
+                                                       HorizontalOptions="FillAndExpand"/>
+                                        </StackLayout>
+
+                                      
+                                        <StackLayout Orientation="Horizontal">
+                                                <Label Text="CPF:"
+                                                       WidthRequest="100"/>
+                                                <Entry x:Name="CPFEntry"
+                                                       HorizontalOptions="FillAndExpand"/>
+                                        </StackLayout>
+
+                                       
+                                        <StackLayout Orientation="Horizontal">
+                                                <Label Text="RG:"
+                                                       WidthRequest="100"/>
+                                                <Entry x:Name="RGEntry"
+                                                       HorizontalOptions="FillAndExpand"/>
+                                        </StackLayout>
+
+                                     
+                                        <StackLayout Orientation="Horizontal">
+                                                <Label Text="Horario:"
+                                                       WidthRequest="100"/>
+                                                <Entry x:Name="HorarioEntry"
+                                                       HorizontalOptions="FillAndExpand"/>
+                                        </StackLayout>
+
+                                       
+                                        <StackLayout Orientation="Horizontal">
+                                                <Label Text="Salario:"
+                                                       WidthRequest="100"/>
+                                                <Entry x:Name="SalarioEntry"
+                                                       HorizontalOptions="FillAndExpand"/>
+                                        </StackLayout>
+
+                                        
+                                        <StackLayout Orientation="Horizontal"
+                                                     HorizontalOptions="Center"
+                                                     Spacing="20"
+                                                     Margin="0,10,0,0">
+                                                <Button Text="🗑️"
+                                                        BackgroundColor="LightSkyBlue"
+                                                        Clicked="Apagar"/>
+                                                <Button Text="✔"
+                                                        BackgroundColor="SkyBlue"
+                                                        Clicked="Salvar"/>
+
+                                        </StackLayout>
+                                </StackLayout>
+                        </Frame>
+
+                        <Frame x:Name="FrameErro"
+                               IsVisible="false"
+                               VerticalOptions="FillAndExpand"
+                               HorizontalOptions="FillAndExpand">
+
+                                <StackLayout>
+
+                                        <Label Text="Falha no salvamento tente de novo"
+                                               VerticalOptions="Start"
+                                               HorizontalOptions="Center"/>
+
+                                        <Button x:Name="BotaoDeCadastro"
+                                                Clicked="TentarDeNovo"
+                                                Text="Tentar de novo"
+                                                VerticalOptions="End"
+                                                HorizontalOptions="Center"/>
+
+                                </StackLayout>
+                        </Frame>
+
+                       
+                        <Button Text="Voltar"
+                                BackgroundColor="LightCyan"
+                                HorizontalOptions="Center"
+                                Clicked="Voltar"/>
+
                 </StackLayout>
-
-                <!-- Name Entry -->
-                <StackLayout Orientation="Horizontal"
-                        Margin="0,10,0,0">
-                    <Label Text="Nome:"
-                            WidthRequest="100"/>
-                    <Entry x:Name="NameEntry"
-                            HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
-                
-                <!-- CPF Entry -->
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="CPF:"
-                            WidthRequest="100"/>
-                    <Entry x:Name="CPFEntry"
-                            HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
-
-                <!-- RG Entry -->
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="RG:"
-                            WidthRequest="100"/>
-                    <Entry x:Name="RGEntry"
-                            HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
-
-                <!-- Horario Entry -->
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Horario:"
-                            WidthRequest="100"/>
-                    <Entry x:Name="HorarioEntry"
-                            HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
-
-                <!-- Salario Entry -->
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Salario:"
-                            WidthRequest="100"/>
-                    <Entry x:Name="SalarioEntry"
-                            HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
-
-                <!-- Buttons -->
-                <StackLayout Orientation="Horizontal"
-                        HorizontalOptions="Center"
-                        Spacing="20"
-                        Margin="0,10,0,0">
-                    <Button Text="🗑️"
-                            BackgroundColor="LightSkyBlue"
-                            Clicked="Apagar"/>
-                    <Button Text="✔"
-                            BackgroundColor="SkyBlue"
-                            Clicked="Salvar"/>
-
-                </StackLayout>
-            </StackLayout>
-        </Frame>
-
-        <Frame x:Name="FrameErro"
-               IsVisible="false"
-               VerticalOptions="FillAndExpand"
-               HorizontalOptions="FillAndExpand">
-
-               <StackLayout>
-
-                     <Label Text="Falha no salvamento tente de novo"
-                        VerticalOptions="Start"
-                        HorizontalOptions="Center"/>
-
-                     <Button x:Name="BotaoDeCadastro"
-                             Clicked="TentarDeNovo"
-                             Text="Tentar de novo"
-                             VerticalOptions="End"
-                             HorizontalOptions="Center"/>
-
-                </StackLayout>
-              </Frame>
-
-        <!-- Bottom Button -->
-        <Button Text="Voltar"
-                BackgroundColor="LightCyan"
-                HorizontalOptions="Center"
-                Clicked="Voltar"/>
-
-    </StackLayout>
-</ContentView>
+        </ContentView>
+        
 </ContentPage>

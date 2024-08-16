@@ -38,8 +38,8 @@ public partial class CadastroFuncionarios : ContentPage
         {
             // O código abaixo preenche o objeto cliente (Modelo) com os dados das Entry's
             
-            if (!String.IsNullOrEmpty(IdEntry.Text))
-                cliente.Id = int.Parse(IdEntry.Text);
+            if (!String.IsNullOrEmpty(IdLabel.Text))
+                cliente.Id = int.Parse(IdLabel.Text);
             else
                 cliente.Id = 0;
             cliente.Nome = NameEntry.Text;
@@ -100,6 +100,21 @@ public partial class CadastroFuncionarios : ContentPage
     else
       return true;
     }
+
+//---------------------------------------------------------------------------------------------------------------------\\
+
+    protected override void OnAppearing()
+  {
+    base.OnAppearing();
+
+    if (cliente != null)
+    {
+      IdLabel.Text        = cliente.Id.ToString();
+      NameEntry.Text      = cliente.Nome;
+      HorarioEntry.Text = cliente.Horario;
+      SalarioEntry.Text  = cliente.Salario;
+    }
+  }
 
 //---------------------------------------------------------------------------------------------------------------------\\
    // public void Salvar(object sender, EventArgs e)

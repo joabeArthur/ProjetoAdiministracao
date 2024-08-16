@@ -14,11 +14,6 @@
                                 VerticalOptions="Center"
                                 Spacing="10">
 
-                         <Button Text="CadastroFuncionarios"
-                                BackgroundColor="LightSkyBlue"
-                                TextColor="Black"
-                                Clicked="CadastroFuncionarios"/>
-
                         <Button Text="Funcionarios"
                                 BackgroundColor="LightSkyBlue"
                                 TextColor="Black"

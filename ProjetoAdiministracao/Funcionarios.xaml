@@ -6,106 +6,98 @@
        <StackLayout Padding="20"
                     VerticalOptions="Center">
 
-              <ScrollView>
-                     <VerticalStackLayout>
+              <ListView HasUnevenRows="True"
+                        ItemSelected="QuandoSelecionarUmItemNaLista"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
 
-                            <!-- Header Label -->
-                            <Label Text="FUNCIONARIOS"
-                                   BackgroundColor="White"
-                                   HorizontalOptions="Center"
-                                   Padding="5"/>
-
-                            <!-- Form -->
-                            <Frame BackgroundColor="White"
-                                   Padding="10"
-                                   Margin="0,20,0,20"
-                                   HorizontalOptions="StartAndExpand">
-                                   <StackLayout>
-
-                                          <Label Text="Id:"
-                                                 HorizontalOptions="FillAndExpand"/>
-                                          <Label x:Name="IdLabel"
-                                                 FontSize="15"
-                                                 BackgroundColor="White"
-                                                 HorizontalOptions="Center"
-                                                 VerticalOptions="End"/>
-
-
-                                          <Label Text="Name:"
-                                                 HorizontalOptions="FillAndExpand"/>
-
-                                          <Label x:Name="NomeLabel"
-                                                 Text="{Binding Nome}"
-                                                 FontSize="30"
-                                                 BackgroundColor="White"
-                                                 HorizontalOptions="Center"
-                                                 VerticalOptions="End"/>
+                     <ListView.ItemTemplate >
+                            <DataTemplate>
+                                   <ViewCell>
+                                          <VerticalStackLayout Padding="20"
+                                                               BackgroundColor="Pink">
+                                                
 
 
 
-                                          <Label Text="CPF:"
-                                                 WidthRequest="100"
-                                                 HorizontalOptions="StartAndExpand"/>
-                                          <Label x:Name="CPFLabel"
-                                                 Text="{Binding CPF}"
-                                                 FontSize="30"
-                                                 HorizontalOptions="StartAndExpand"
-                                                 VerticalOptions="Center"/>
+                                                        <Label Text="FUNCIONARIOS"
+                                                               BackgroundColor="White"
+                                                               HorizontalOptions="Center"
+                                                               Padding="5"/>
+                                                               <StackLayout>
 
-                                          <Label Text="RG:"
-                                                 WidthRequest="100"
-                                                 HorizontalOptions="StartAndExpand"/>
-                                          <Label x:Name="RGLabel"
-                                                 Text="{Binding RG}"
-                                                 FontSize="30"
-                                                 HorizontalOptions="StartAndExpand"
-                                                 VerticalOptions="Start"/>
+                                                                      <Label Text="Id:"
+                                                                             HorizontalOptions="FillAndExpand"/>
+                                                                      <Label FontSize="15"
+                                                                             BackgroundColor="White"
+                                                                             HorizontalOptions="Center"
+                                                                             VerticalOptions="End"/>
 
 
+                                                                      <Label Text="Name:"
+                                                                             HorizontalOptions="FillAndExpand"/>
 
-                                          <Label Text="Das:"
-                                                 WidthRequest="100"
-                                                 HorizontalOptions="StartAndExpand"/>
-                                          <Label x:Name="HorarioLabel"
-                                                 Text="{Binding Horario}"
-                                                 FontSize="30"
-                                                 HorizontalOptions="StartAndExpand"
-                                                 VerticalOptions="Start"/>
-
-                                          <Label Text="Salario:"
-                                                 WidthRequest="100"
-                                                 HorizontalOptions="StartAndExpand"/>
-                                          <Label x:Name="SalarioLabel"
-                                                 Text="{Binding Salario}"
-                                                 FontSize="30"
-                                                 HorizontalOptions="StartAndExpand"
-                                                 VerticalOptions="Start"/>
+                                                                      <Label Text="{Binding Nome}"
+                                                                             FontSize="30"
+                                                                             BackgroundColor="White"
+                                                                             HorizontalOptions="Center"
+                                                                             VerticalOptions="End"/>
 
 
-                                          <Button Text="🗑️"
-                                                  HorizontalOptions="End"
-                                                  BackgroundColor="SkyBlue"
-                                                  Clicked="Apagar"/>
 
-                                   </StackLayout>
+                                                                      <Label Text="CPF:"
+                                                                             WidthRequest="100"
+                                                                             HorizontalOptions="StartAndExpand"/>
+                                                                      <Label  Text="{Binding CPF}"
+                                                                             FontSize="30"
+                                                                             HorizontalOptions="StartAndExpand"
+                                                                             VerticalOptions="Center"/>
 
-                            </Frame>
-                            
-                            
+                                                                      <Label Text="RG:"
+                                                                             WidthRequest="100"
+                                                                             HorizontalOptions="StartAndExpand"/>
+                                                                      <Label Text="{Binding RG}"
+                                                                             FontSize="30"
+                                                                             HorizontalOptions="StartAndExpand"
+                                                                             VerticalOptions="Start"/>
 
-                            <!-- Bottom Button -->
-                            <Button Text="Voltar"
-                                    BackgroundColor="Cyan"
-                                    HorizontalOptions="Center"
-                                    Clicked="Voltar"/>
 
-                            <Button Text="Registrar"
-                                                  HorizontalOptions="End"
-                                                  BackgroundColor="SkyBlue"
-                                                  Clicked="Registrar"/>
 
-                     </VerticalStackLayout>
+                                                                      <Label Text="Das:"
+                                                                             WidthRequest="100"
+                                                                             HorizontalOptions="StartAndExpand"/>
+                                                                      <Label Text="{Binding Horario}"
+                                                                             FontSize="30"
+                                                                             HorizontalOptions="StartAndExpand"
+                                                                             VerticalOptions="Start"/>
 
-              </ScrollView>
-       </StackLayout> 
+                                                                      <Label Text="Salario:"
+                                                                             WidthRequest="100"
+                                                                             HorizontalOptions="StartAndExpand"/>
+                                                                      <Label Text="{Binding Salario}"
+                                                                             FontSize="30"
+                                                                             HorizontalOptions="StartAndExpand"
+                                                                             VerticalOptions="Start"/>
+
+                                                               </StackLayout>
+
+                                                        <Button Text="Voltar"
+                                                                BackgroundColor="Cyan"
+                                                                HorizontalOptions="Start"
+                                                                Clicked="Voltar"/>
+
+                                                        
+
+                                                        <Button Text="+"
+                                                                HorizontalOptions="End"
+                                                                Background="Blue"
+                                                                Clicked="IrCadastroFuncionario"/>
+
+                                             
+                                          </VerticalStackLayout>
+                                   </ViewCell>
+                            </DataTemplate>
+                     </ListView.ItemTemplate>
+              </ListView>
+       </StackLayout>
 </ContentPage>
