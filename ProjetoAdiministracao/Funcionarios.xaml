@@ -3,97 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.Funcionarios"
              BackgroundColor="LightSkyBlue">
-       <StackLayout Padding="20"
-                    VerticalOptions="Center">
+       <StackLayout Padding="20">
 
-              <ListView HasUnevenRows="True"
+              <Button Clicked="SelecionarNaTelaFuncionarios"
+                      Text="Selecionar na tela funcionarios"
+                      FontSize="40"
+                      HorizontalOptions="Center"
+                      Margin="40,0,40,40"/>
+
+              <Button Text="Voltar"
+                      HorizontalOptions="Center"
+                      Clicked="Voltar"/>
+
+              <ListView x:Name="ListaClientes"
+                        HasUnevenRows="True"
                         ItemSelected="QuandoSelecionarUmItemNaLista"
                         HorizontalOptions="Fill"
                         VerticalOptions="Fill">
 
-                     <ListView.ItemTemplate >
+                     <ListView.ItemTemplate>
                             <DataTemplate>
                                    <ViewCell>
-                                          <VerticalStackLayout Padding="20"
-                                                               BackgroundColor="Pink">
-                                                
+                                          <VerticalStackLayout Margin="47"
+                                                               BackgroundColor="Gray"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand">
 
 
+                                                 <StackLayout>
 
-                                                        <Label Text="FUNCIONARIOS"
-                                                               BackgroundColor="White"
+                                                        <Label Text="{Binding Id}"
+                                                               FontSize="15"
                                                                HorizontalOptions="Center"
-                                                               Padding="5"/>
-                                                               <StackLayout>
+                                                               VerticalOptions="Start"/>
 
-                                                                      <Label Text="Id:"
-                                                                             HorizontalOptions="FillAndExpand"/>
-                                                                      <Label FontSize="15"
-                                                                             BackgroundColor="White"
-                                                                             HorizontalOptions="Center"
-                                                                             VerticalOptions="End"/>
+                                                        <Label Text="{Binding Nome}"
+                                                               FontSize="15"
+                                                               Margin="20"
+                                                               HorizontalOptions="Center"
+                                                               VerticalOptions="Start"/>
 
+                                                        <Label  Text="{Binding CPF}"
+                                                                FontSize="15"
+                                                                Margin="20"
+                                                                HorizontalOptions="Center"
+                                                                VerticalOptions="Start"/>
 
-                                                                      <Label Text="Name:"
-                                                                             HorizontalOptions="FillAndExpand"/>
+                                                        <Label Text="{Binding RG}"
+                                                               FontSize="15"
+                                                               Margin="20"
+                                                               HorizontalOptions="Center"
+                                                               VerticalOptions="Start"/>
 
-                                                                      <Label Text="{Binding Nome}"
-                                                                             FontSize="30"
-                                                                             BackgroundColor="White"
-                                                                             HorizontalOptions="Center"
-                                                                             VerticalOptions="End"/>
+                                                        <Label Text="{Binding Horario}"
+                                                               FontSize="15"
+                                                               Margin="20"
+                                                               HorizontalOptions="Center"
+                                                               VerticalOptions="Start"/>
 
+                                                        <Label Text="{Binding Salario}"
+                                                               FontSize="15"
+                                                               Margin="20"
+                                                               HorizontalOptions="Center"
+                                                               VerticalOptions="Start"/>
 
+                                                 </StackLayout>
 
-                                                                      <Label Text="CPF:"
-                                                                             WidthRequest="100"
-                                                                             HorizontalOptions="StartAndExpand"/>
-                                                                      <Label  Text="{Binding CPF}"
-                                                                             FontSize="30"
-                                                                             HorizontalOptions="StartAndExpand"
-                                                                             VerticalOptions="Center"/>
-
-                                                                      <Label Text="RG:"
-                                                                             WidthRequest="100"
-                                                                             HorizontalOptions="StartAndExpand"/>
-                                                                      <Label Text="{Binding RG}"
-                                                                             FontSize="30"
-                                                                             HorizontalOptions="StartAndExpand"
-                                                                             VerticalOptions="Start"/>
-
-
-
-                                                                      <Label Text="Das:"
-                                                                             WidthRequest="100"
-                                                                             HorizontalOptions="StartAndExpand"/>
-                                                                      <Label Text="{Binding Horario}"
-                                                                             FontSize="30"
-                                                                             HorizontalOptions="StartAndExpand"
-                                                                             VerticalOptions="Start"/>
-
-                                                                      <Label Text="Salario:"
-                                                                             WidthRequest="100"
-                                                                             HorizontalOptions="StartAndExpand"/>
-                                                                      <Label Text="{Binding Salario}"
-                                                                             FontSize="30"
-                                                                             HorizontalOptions="StartAndExpand"
-                                                                             VerticalOptions="Start"/>
-
-                                                               </StackLayout>
-
-                                                        <Button Text="Voltar"
-                                                                BackgroundColor="Cyan"
-                                                                HorizontalOptions="Start"
-                                                                Clicked="Voltar"/>
-
-                                                        
-
-                                                        <Button Text="+"
-                                                                HorizontalOptions="End"
-                                                                Background="Blue"
-                                                                Clicked="IrCadastroFuncionario"/>
-
-                                             
                                           </VerticalStackLayout>
                                    </ViewCell>
                             </DataTemplate>
