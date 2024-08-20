@@ -25,7 +25,7 @@ public class ClienteControle : BaseControle
   public virtual List<Cliente>? LerTodos()
   {
     var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    return new List<Cliente>(collection.FindAll().OrderBy(d => d.Nome));
+    return new List<Cliente>(collection.FindAll().OrderBy(d => d.Id));
   }
 
   //----------------------------------------------------------------------------

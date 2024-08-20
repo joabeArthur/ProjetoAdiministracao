@@ -2,77 +2,114 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.Funcionarios"
+             Shell.NavBarIsVisible="False"
              BackgroundColor="LightSkyBlue">
-       <StackLayout Padding="20">
+
+       <Grid>
+              <Grid.ColumnDefinitions>
+                     <ColumnDefinition Width="Auto"/>
+                     <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="Auto"/>
+              </Grid.ColumnDefinitions>
+
+              <Grid.RowDefinitions>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+                     <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
 
               <Button Clicked="SelecionarNaTelaFuncionarios"
-                      Text="Selecionar na tela funcionarios"
-                      FontSize="40"
+                      Text="Adicionar"
+                      FontSize="20"
                       HorizontalOptions="Center"
-                      Margin="40,0,40,40"/>
+                      Margin="40,0,40,40"
+                      Grid.Row="0"
+                      Grid.Column="2"
+                      Grid.ColumnSpan="2"/>
 
               <Button Text="Voltar"
                       HorizontalOptions="Center"
-                      Clicked="Voltar"/>
+                      Clicked="Voltar"
+                      Grid.Row="1"
+                      Grid.ColumnSpan="6"/>
 
               <ListView x:Name="ListaClientes"
                         HasUnevenRows="True"
                         ItemSelected="QuandoSelecionarUmItemNaLista"
                         HorizontalOptions="Fill"
-                        VerticalOptions="Fill">
+                        VerticalOptions="Fill"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.ColumnSpan="6">
+
 
                      <ListView.ItemTemplate>
                             <DataTemplate>
                                    <ViewCell>
+
                                           <VerticalStackLayout Margin="47"
                                                                BackgroundColor="Gray"
                                                                HorizontalOptions="FillAndExpand"
-                                                               VerticalOptions="FillAndExpand">
+                                                               VerticalOptions="FillAndExpand"
+                                                               Grid.Row="2"
+                                                               Grid.RowSpan="4"
+                                                               Grid.ColumnSpan="6">
 
 
-                                                 <StackLayout>
+                                                 <Label Text="{Binding Id}"
+                                                        FontSize="15"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Center"
+                                                        Grid.ColumnSpan="3"
+                                                        Grid.RowSpan="3"/>
 
-                                                        <Label Text="{Binding Id}"
-                                                               FontSize="15"
-                                                               HorizontalOptions="Center"
-                                                               VerticalOptions="Start"/>
+                                                 <Label Text="{Binding Nome}"
+                                                        FontSize="15"
+                                                        Margin="20"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        Grid.ColumnSpan="3"
+                                                        Grid.RowSpan="3"/>
 
-                                                        <Label Text="{Binding Nome}"
-                                                               FontSize="15"
-                                                               Margin="20"
-                                                               HorizontalOptions="Center"
-                                                               VerticalOptions="Start"/>
+                                                 <Label  Text="{Binding CPF}"
+                                                         FontSize="15"
+                                                         Margin="20"
+                                                         HorizontalOptions="Center"
+                                                         VerticalOptions="Start"
+                                                         Grid.ColumnSpan="3"/>
 
-                                                        <Label  Text="{Binding CPF}"
-                                                                FontSize="15"
-                                                                Margin="20"
-                                                                HorizontalOptions="Center"
-                                                                VerticalOptions="Start"/>
+                                                 <Label Text="{Binding RG}"
+                                                        FontSize="15"
+                                                        Margin="20"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        Grid.ColumnSpan="3"/>
 
-                                                        <Label Text="{Binding RG}"
-                                                               FontSize="15"
-                                                               Margin="20"
-                                                               HorizontalOptions="Center"
-                                                               VerticalOptions="Start"/>
+                                                 <Label Text="{Binding Horario}"
+                                                        FontSize="15"
+                                                        Margin="20"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        Grid.ColumnSpan="3"/>
 
-                                                        <Label Text="{Binding Horario}"
-                                                               FontSize="15"
-                                                               Margin="20"
-                                                               HorizontalOptions="Center"
-                                                               VerticalOptions="Start"/>
+                                                 <Label Text="{Binding Salario}"
+                                                        FontSize="15"
+                                                        Margin="20"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        Grid.ColumnSpan="3"/>
 
-                                                        <Label Text="{Binding Salario}"
-                                                               FontSize="15"
-                                                               Margin="20"
-                                                               HorizontalOptions="Center"
-                                                               VerticalOptions="Start"/>
-
-                                                 </StackLayout>
 
                                           </VerticalStackLayout>
                                    </ViewCell>
                             </DataTemplate>
                      </ListView.ItemTemplate>
               </ListView>
-       </StackLayout>
+       </Grid>
 </ContentPage>
