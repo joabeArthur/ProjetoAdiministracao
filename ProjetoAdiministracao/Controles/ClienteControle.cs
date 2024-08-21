@@ -28,7 +28,7 @@ public class ClienteControle : BaseControle
     return new List<Cliente>(collection.FindAll().OrderBy(d => d.Id));
   }
 
-  //----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 
   public virtual void Apagar(int idCliente)
   {

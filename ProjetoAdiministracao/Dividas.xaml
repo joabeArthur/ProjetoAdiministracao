@@ -4,133 +4,112 @@
              x:Class="ProjetoAdiministracao.Dividas"
              Shell.NavBarIsVisible="False"
              BackgroundColor="LightSkyBlue">
-    <StackLayout Padding="20" VerticalOptions="Center">
-        
-        <!-- Header Label -->
-        <Label Text="Dividas"
-               BackgroundColor="White"
-               HorizontalOptions="Center"
-               Padding="5" />
 
-        <!-- Form -->
-        <Frame BackgroundColor="White"
-               Padding="10" 
-               Margin="0,20,0,20">
+       <Grid>
 
-            <StackLayout>
+              <Grid.ColumnDefinitions>
+                     <ColumnDefinition Width="Auto"/>
+                     <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="Auto"/>
+              </Grid.ColumnDefinitions>
 
-                <!-- Form Entries -->
-                <StackLayout Orientation="Horizontal" 
-                             Margin="0,10,0,0">
+              <Grid.RowDefinitions>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="*"/>
+                     <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
 
-                    <Label Text="Nome:" 
-                           WidthRequest="100"/>
+              <Button Clicked="SelecionarNaTelaFuncionarios"
+                      Text="Adicionar"
+                      FontSize="20"
+                      HorizontalOptions="Center"
+                      Margin="40,0,40,40"
+                      Grid.Row="0"
+                      Grid.Column="2"
+                      Grid.ColumnSpan="2"/>
 
-                    <Entry x:Name="NameEntry" 
-                           HorizontalOptions="FillAndExpand"/>
+              <Button Text="Voltar"
+                      Clicked="Voltar"
+                      FontSize="20"
+                      HorizontalOptions="Center"
+                      Margin="40,0,40,40"
+                      Grid.Row="1"
+                      Grid.Column="2"
+                      Grid.ColumnSpan="2"/>
 
-                </StackLayout>
+              <Label Text="Dividas"
+                     BackgroundColor="White"
+                     HorizontalOptions="Center"
+                     Padding="5"
+                     Grid.Row="0"
+                     Grid.Column="1"/>
 
-                <StackLayout Orientation="Horizontal">
+              <ListView x:Name="ListaClientes"
+                        HasUnevenRows="True"
+                        ItemSelected="QuandoSelecionarUmItemNaLista"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.ColumnSpan="6">
 
-                    <Label Text="Valor:"    
-                           WidthRequest="100"/>
 
-                    <Entry x:Name="ValueEntry" 
-                           HorizontalOptions="FillAndExpand"/>
+                     <ListView.ItemTemplate>
+                            <DataTemplate>
+                                   <ViewCell>
 
-                </StackLayout>
+                                          <VerticalStackLayout Margin="47"
+                                                               BackgroundColor="Gray"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="FillAndExpand"
+                                                               Grid.Row="2"
+                                                               Grid.RowSpan="4"
+                                                               Grid.ColumnSpan="6">
 
-                <StackLayout Orientation="Horizontal">
 
-                    <Label Text="Data:" 
-                           WidthRequest="100"/>
-                    <Entry x:Name="DateEntry" 
-                           HorizontalOptions="FillAndExpand"/>
+                                                 <Label Text="{Binding Id}"
+                                                        FontSize="15"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Center"
+                                                        Grid.ColumnSpan="3"
+                                                        Grid.RowSpan="3"/>
 
-                </StackLayout>
+                                                 <Label Text="{Binding Nome}"
+                                                        FontSize="15"
+                                                        Margin="20"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        Grid.ColumnSpan="3"
+                                                        Grid.RowSpan="3"/>
 
-                <StackLayout Orientation="Horizontal">
+                                                 <Label Text="{Binding CPF}"
+                                                        FontSize="15"
+                                                        Margin="20"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        Grid.ColumnSpan="3"
+                                                        Grid.RowSpan="3"/>
 
-                    <Label Text="Produto:" 
-                           WidthRequest="100"/>
-                    <Entry x:Name="ProductEntry"
-                           HorizontalOptions="FillAndExpand"/>
+                                                 <Label Text="{Binding Valor}"
+                                                        FontSize="15"
+                                                        Margin="20"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        Grid.ColumnSpan="3"
+                                                        Grid.RowSpan="3"/>
 
-                </StackLayout>
+                                                 <Label Text="{Binding Data}"
+                                                        FontSize="15"
+                                                        Margin="20"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Start"
+                                                        Grid.ColumnSpan="3"
+                                                        Grid.RowSpan="3"/>
 
-                <StackLayout Orientation="Horizontal">
-
-                    <Label Text="Quantidade:" 
-                           WidthRequest="100"/>
-                    <Entry x:Name="QuantityEntry" 
-                           HorizontalOptions="FillAndExpand"/>
-
-                </StackLayout>
-                
-                <!-- Trash Button -->
-                <Button Text="🗑️"
-                        Clicked="Apagar"
-                        HorizontalOptions="End"
-                        BackgroundColor="LightSkyBlue"/>
-
-            </StackLayout>
-
-        </Frame>
-
-        
-
-        <Frame x:Name="FrameApagar"
-               IsVisible="false">
-
-              <Grid>
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <Label Text="AVISO: dados excluidos vão se colocados na area de Recibos confimar?"
-                   Grid.Row="0"
-                   Grid.Column="1"/>
-                
-            <Button x:Name="NomeApagarSIM"
-                    Clicked="ApagarSIM"
-                    Text="Sim"
-                    Grid.Row="1"
-                    Grid.Column="0"/>
-
-            <Button x:Name="NomeApagarNao"
-                    Clicked="ApagarNAO"
-                    Text="Não"
-                    Grid.Row="1"
-                    Grid.Column="2"/>
-
-              </Grid>
-
-        </Frame>
-
-        <!-- Bottom Buttons -->
-        <StackLayout Orientation="Horizontal" 
-                     HorizontalOptions="Center" 
-                     Spacing="20">
-
-            <Button Text="Voltar" 
-                    BackgroundColor="Cyan"
-                    Clicked="Voltar"/>
-
-            <Button Text="+" 
-                    BackgroundColor="Blue"
-                    Clicked="Adicionar"/>
-
-        </StackLayout>
-        
-    </StackLayout>
+                                          </VerticalStackLayout>
+                                   </ViewCell>
+                            </DataTemplate>
+                     </ListView.ItemTemplate>
+              </ListView>
+       </Grid>
 </ContentPage>

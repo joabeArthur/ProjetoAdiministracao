@@ -1,18 +1,15 @@
+using LiteDBExample.Modelos;
 using LiteDB;
 
 namespace LiteDBExample.Modelos;
 
-public class Cliente : Registro
+public class Divida : Registro
 {
   [BsonId]
 
     public int Id { get; set; }
-    public int IdDi { get; set; }
     public string Nome { get; set; }
     public string CPF { get; set; }
-    public string RG { get; set; }
-    public string Horario { get; set; }
-    public string Salario { get; set; }
     public string Data { get; set; }
     public string Valor { get; set; }
 }

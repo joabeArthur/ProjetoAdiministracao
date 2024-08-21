@@ -34,10 +34,13 @@
                       Grid.ColumnSpan="2"/>
 
               <Button Text="Voltar"
-                      HorizontalOptions="Center"
                       Clicked="Voltar"
+                      FontSize="20"
+                      HorizontalOptions="Center"
+                      Margin="40,0,40,40"
                       Grid.Row="1"
-                      Grid.ColumnSpan="6"/>
+                      Grid.Column="2"
+                      Grid.ColumnSpan="2"/>
 
               <ListView x:Name="ListaClientes"
                         HasUnevenRows="True"

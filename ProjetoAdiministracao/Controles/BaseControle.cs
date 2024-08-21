@@ -49,6 +49,11 @@ public class BaseControle
     return null;
   }
 
+   public virtual List<Registro>? LerTodosDivida()
+  {
+    return null;
+  }
+
   //----------------------------------------------------------------------------
 }
 

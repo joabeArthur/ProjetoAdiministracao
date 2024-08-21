@@ -4,84 +4,134 @@
              x:Class="ProjetoAdiministracao.DicionarDividas"
              Shell.NavBarIsVisible="False"
              BackgroundColor="LightSkyBlue">
-    <StackLayout Padding="20"
-            VerticalOptions="Center">
+    <ContentView>
+              <StackLayout Padding="20"
+                           VerticalOptions="Center">
 
-        <!-- Header Label -->
-        <Label Text="Adicionar 'Dividas'"
-               BackgroundColor="White"
-               HorizontalOptions="Center"
-               Padding="5"/>
 
-        <!-- Form -->
-        <Frame BackgroundColor="White"
-                Padding="10"
-                Margin="0,20,0,20">
-            <StackLayout>
-                <!-- Adicionar Button -->
-                <Button Text="Adicionar"
-                        HorizontalOptions="Center"/>
+                     <Label Text="CADASTRO DE FUNCIONARIOS"
+                            BackgroundColor="White"
+                            HorizontalOptions="Center"
+                            Padding="5"/>
 
-                <!-- Name Entry -->
-                <StackLayout Orientation="Horizontal"
-                        Margin="0,10,0,0">
-                    <Label Text="Nome:"
-                            WidthRequest="100"/>
-                    <Entry x:Name="NameEntry"
-                            HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
 
-                <!-- Value Entry -->
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Valor:"
-                            WidthRequest="100"/>
-                    <Entry x:Name="ValueEntry"
-                            HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
+                     <Frame BackgroundColor="White"
+                            Padding="10"
+                            Margin="0,20,0,20">
+                            <StackLayout>
 
-                <!-- Date Entry -->
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Data:"
-                            WidthRequest="100"/>
-                    <Entry x:Name="DateEntry"
-                            HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
+                                   <StackLayout Orientation="Horizontal"
+                                                Margin="0,10,0,0">
+                                          <Label  x:Name="IdLabel"
+                                                  Text="Id:"
+                                                  WidthRequest="100"/>
+                                          <Label Text="{Binding IdDi}"
+                                                 HorizontalOptions="FillAndExpand"/>
+                                   </StackLayout>
 
-                <!-- Product Entry -->
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Produto:"
-                            WidthRequest="100"/>
-                    <Entry x:Name="ProductEntry"
-                            HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
 
-                <!-- Quantity Entry -->
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Quantidade:"
-                            WidthRequest="100"/>
-                    <Entry x:Name="QuantityEntry"
-                            HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
+                                   <StackLayout Orientation="Horizontal"
+                                                Margin="0,10,0,0">
+                                          <Label Text="Nome:"
+                                                 WidthRequest="100"/>
+                                          <Entry x:Name="NameEntry"
+                                                 HorizontalOptions="FillAndExpand"/>
+                                   </StackLayout>
 
-                <!-- Check Button -->
-                <Button Text="✔"
-                        HorizontalOptions="End"
-                        BackgroundColor="LightSkyBlue"
-                        Clicked="Adicionar"/>
-            </StackLayout>
-        </Frame>
 
-        <!-- Bottom Buttons -->
-        <StackLayout Orientation="Horizontal"
-                HorizontalOptions="Center"
-                Spacing="20">
-            <Button Text="Voltar"
-                    BackgroundColor="Cyan"
-                    Clicked="Voltar"/>
-            <Button Text="🗑️"
-                    BackgroundColor="Cyan"
-                    Clicked="Apagar"/>
-        </StackLayout>
+                                   <StackLayout Orientation="Horizontal">
+                                          <Label Text="CPF:"
+                                                 WidthRequest="100"/>
+                                          <Entry x:Name="CPFEntry"
+                                                 HorizontalOptions="FillAndExpand"/>
+                                   </StackLayout>
 
-    </StackLayout>
+
+                                   <StackLayout Orientation="Horizontal">
+                                          <Label Text="Valor:"
+                                                 WidthRequest="100"/>
+                                          <Entry x:Name="ValorEntry"
+                                                 HorizontalOptions="FillAndExpand"/>
+                                   </StackLayout>
+
+
+                                   <StackLayout Orientation="Horizontal">
+                                          <Label Text="Data:"
+                                                 WidthRequest="100"/>
+                                          <Entry x:Name="DataEntry"
+                                                 HorizontalOptions="FillAndExpand"/>
+                                   </StackLayout>
+
+
+                                   <StackLayout Orientation="Horizontal"
+                                                HorizontalOptions="Center"
+                                                Spacing="20"
+                                                Margin="0,10,0,0">
+
+                                          <Button Text="Limpar"
+                                                  BackgroundColor="LightSkyBlue"
+                                                  Clicked="Apagar"/>
+                                          <Button Text="🗑️"
+                                                  BackgroundColor="LightSkyBlue"
+                                                  Clicked="Excluir"/>
+                                          <Button Text="✔"
+                                                  BackgroundColor="SkyBlue"
+                                                  Clicked="Salvar"/>
+
+                                   </StackLayout>
+
+                                   <Frame x:Name="FrameErro"
+                                          IsVisible="false"
+                                          VerticalOptions="FillAndExpand"
+                                          HorizontalOptions="FillAndExpand">
+
+                                          <StackLayout>
+
+                                                 <Label Text="Falha no salvamento tente de novo"
+                                                        VerticalOptions="Start"
+                                                        HorizontalOptions="Center"/>
+
+                                                 <Button x:Name="BotaoDeCadastro"
+                                                         Clicked="TentarDeNovo"
+                                                         Text="Tentar de novo"
+                                                         VerticalOptions="End"
+                                                         HorizontalOptions="Center"/>
+
+                                          </StackLayout>
+                                   </Frame>
+
+                                   <Frame x:Name="FrameAviso"
+                                          IsVisible="false"
+                                          VerticalOptions="FillAndExpand"
+                                          HorizontalOptions="FillAndExpand">
+
+                                          <StackLayout>
+
+                                                 <Label Text="Tem certeza? os dados excluidos não podem ser recuperados."
+                                                        VerticalOptions="Start"
+                                                        HorizontalOptions="Center"/>
+
+                                                 <Button Clicked="Certeza"
+                                                         Text="Excluir"
+                                                         VerticalOptions="End"
+                                                         HorizontalOptions="Center"/>
+
+                                                 <Button Clicked="NaoExcluir"
+                                                         Text="Cancelar"
+                                                         VerticalOptions="End"
+                                                         HorizontalOptions="Center"/>
+
+                                          </StackLayout>
+                                   </Frame>
+                            </StackLayout>
+                     </Frame>
+
+
+                     <Button Text="Voltar"
+                             BackgroundColor="LightCyan"
+                             HorizontalOptions="Center"
+                             Clicked="Voltar"/>
+
+              </StackLayout>
+       </ContentView>
 </ContentPage>
