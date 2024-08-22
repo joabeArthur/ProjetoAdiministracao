@@ -5,7 +5,6 @@ namespace ProjetoAdiministracao;
 
 public class BaseControle
 {
-  CadastroFuncionarios cadastroFuncionarios;
 
   //----------------------------------------------------------------------------
 

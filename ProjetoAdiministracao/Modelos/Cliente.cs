@@ -7,7 +7,6 @@ public class Cliente : Registro
   [BsonId]
 
     public int Id { get; set; }
-    public int IdDi { get; set; }
     public string Nome { get; set; }
     public string CPF { get; set; }
     public string RG { get; set; }

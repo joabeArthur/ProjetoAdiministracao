@@ -71,9 +71,9 @@ public partial class DicionarDividas : ContentPage
 
 
       if (!String.IsNullOrEmpty(IdLabel.Text))
-        cliente.IdDi = int.Parse(IdLabel.Text);
+        cliente.Id = int.Parse(IdLabel.Text);
       else
-        cliente.IdDi = 0;
+        cliente.Id = 0;
       cliente.Nome = NameEntry.Text;
       cliente.Data = DataEntry.Text;
       cliente.CPF = CPFEntry.Text;
@@ -91,7 +91,7 @@ public partial class DicionarDividas : ContentPage
       }
       else
       {
-        clienteControle.Ler(cliente.IdDi);
+        clienteControle.Ler(cliente.Id);
         Application.Current.MainPage = new Funcionarios();
       }
 
