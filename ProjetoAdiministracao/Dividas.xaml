@@ -67,14 +67,14 @@
                                                                Grid.ColumnSpan="6">
 
 
-                                                 <Label Text="{Binding Id}"
+                                                 <Label Text="{Binding Divida.Id}"
                                                         FontSize="15"
                                                         HorizontalOptions="Center"
                                                         VerticalOptions="Center"
                                                         Grid.ColumnSpan="3"
                                                         Grid.RowSpan="3"/>
 
-                                                 <Label Text="{Binding Nome}"
+                                                 <Label Text="{Binding Divida.Nome}"
                                                         FontSize="15"
                                                         Margin="20"
                                                         HorizontalOptions="Center"
@@ -82,7 +82,7 @@
                                                         Grid.ColumnSpan="3"
                                                         Grid.RowSpan="3"/>
 
-                                                 <Label Text="{Binding CPF}"
+                                                 <Label Text="{Binding Divida.CPF}"
                                                         FontSize="15"
                                                         Margin="20"
                                                         HorizontalOptions="Center"
@@ -90,7 +90,7 @@
                                                         Grid.ColumnSpan="3"
                                                         Grid.RowSpan="3"/>
 
-                                                 <Label Text="{Binding Valor}"
+                                                 <Label Text="{Binding Divida.Valor}"
                                                         FontSize="15"
                                                         Margin="20"
                                                         HorizontalOptions="Center"
@@ -98,7 +98,7 @@
                                                         Grid.ColumnSpan="3"
                                                         Grid.RowSpan="3"/>
 
-                                                 <Label Text="{Binding Data}"
+                                                 <Label Text="{Binding Divida.Data}"
                                                         FontSize="15"
                                                         Margin="20"
                                                         HorizontalOptions="Center"

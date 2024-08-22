@@ -9,12 +9,14 @@ public partial class DicionarDividas : ContentPage
 {
   public Cliente cliente;
   public ClienteControle clienteControle;
+  public Divida divida;
 
   public DicionarDividas()
   {
     InitializeComponent();
     cliente = new Cliente();
     clienteControle = new ClienteControle();
+    divida = new Divida();
   }
 
   //---------------------------------------------------------------------------------------------------------------------\\
@@ -71,28 +73,27 @@ public partial class DicionarDividas : ContentPage
 
 
       if (!String.IsNullOrEmpty(IdLabel.Text))
-        cliente.Id = int.Parse(IdLabel.Text);
+        divida.Id = int.Parse(IdLabel.Text);
       else
-        cliente.Id = 0;
-      cliente.Nome = NameEntry.Text;
-      cliente.Data = DataEntry.Text;
-      cliente.CPF = CPFEntry.Text;
-      cliente.Valor = ValorEntry.Text;
+        divida.Id = 0;
+      divida.Nome = NameEntry.Text;
+      divida.Data = DataEntry.Text;
+      divida.CPF = CPFEntry.Text;
+      divida.Valor = ValorEntry.Text;
 
 
       
-      clienteControle.CriarOuAtualizar(cliente);
+      clienteControle.CriarOuAtualizar(divida);
 
       await DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
 
-      if (cliente.Nome == null || cliente.CPF == null)
+      if (divida.Nome == null || divida.CPF == null)
       {
         FrameErro.IsVisible = true;
       }
       else
       {
-        clienteControle.Ler(cliente.Id);
-        Application.Current.MainPage = new Funcionarios();
+        Application.Current.MainPage = new Dividas();
       }
 
     }

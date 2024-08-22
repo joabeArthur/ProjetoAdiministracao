@@ -22,7 +22,7 @@ public class DividasControle : BaseControle
 
 //----------------------------------------------------------------------------
 
-  public virtual List<Cliente>? LerTodos()
+  public virtual List<Divida>? LerTodos()
   {
     conversor.ConverterDividasParaClientes();
     var tabela = liteDB.GetCollection<Divida>(NomeDaTabela);

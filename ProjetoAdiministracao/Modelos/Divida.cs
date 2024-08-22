@@ -12,4 +12,5 @@ public class Divida : Registro
     public string CPF { get; set; }
     public string Data { get; set; }
     public string Valor { get; set; }
+
 }
