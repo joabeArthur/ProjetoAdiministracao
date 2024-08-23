@@ -5,16 +5,16 @@ using System.Collections.Generic;
 
 namespace ProjetoAdiministracao;
 
-public partial class DicionarDividas : ContentPage
+public partial class DicionarAReceber : ContentPage
 {
-  public DividasControle dividasControle;
-  public Divida divida;
+  public AReceber receber;
+  public AReceberControle receberControle;
 
-  public DicionarDividas()
+  public DicionarAReceber()
   {
     InitializeComponent();
-    divida = new Divida();
-    dividasControle = new DividasControle();
+    receber = new AReceber();
+    receberControle = new AReceberControle();
   }
 
   //---------------------------------------------------------------------------------------------------------------------\\
@@ -36,7 +36,7 @@ public partial class DicionarDividas : ContentPage
 
   private void Certeza(object sender, EventArgs e)
   {
-    dividasControle.Apagar(divida.Id);
+    receberControle.Apagar(receber.Id);
     FrameAviso.IsVisible = false;
     Application.Current.MainPage = new Funcionarios();
   }
@@ -51,13 +51,13 @@ public partial class DicionarDividas : ContentPage
   {
     base.OnAppearing();
 
-    if (divida != null)
+    if (receber != null)
     {
-      IdLabel.Text = divida.Id.ToString();
-      NameEntry.Text = divida.Nome;
-      ValorEntry.Text = divida.Valor;
-      DataEntry.Text = divida.Data;
-      CPFEntry.Text = divida.CPF;
+      IdLabel.Text = receber.Id.ToString();
+      NameEntry.Text = receber.Nome;
+      ValorEntry.Text = receber.Valor;
+      DataEntry.Text = receber.Data;
+      CPFEntry.Text = receber.CPF;
     }
   }
 
@@ -71,27 +71,27 @@ public partial class DicionarDividas : ContentPage
 
 
       if (!String.IsNullOrEmpty(IdLabel.Text))
-        divida.Id = int.Parse(IdLabel.Text);
+        receber.Id = int.Parse(IdLabel.Text);
       else
-        divida.Id = 0;
-      divida.Nome = NameEntry.Text;
-      divida.Data = DataEntry.Text;
-      divida.CPF = CPFEntry.Text;
-      divida.Valor = ValorEntry.Text;
+        receber.Id = 0;
+      receber.Nome = NameEntry.Text;
+      receber.Data = DataEntry.Text;
+      receber.CPF = CPFEntry.Text;
+      receber.Valor = ValorEntry.Text;
 
 
       
-      dividasControle.CriarOuAtualizar(divida);
+      receberControle.CriarOuAtualizar(receber);
 
       await DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
 
-      if (divida.Nome == null || divida.CPF == null)
+      if (receber.Nome == null || receber.CPF == null)
       {
         FrameErro.IsVisible = true;
       }
       else
       {
-        Application.Current.MainPage = new Dividas();
+        Application.Current.MainPage = new AReceberPage();
       }
 
     }

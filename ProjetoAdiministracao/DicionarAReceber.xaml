@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjetoAdiministracao.DicionarDividas"
+             x:Class="ProjetoAdiministracao.DicionarAReceber"
              Shell.NavBarIsVisible="False"
              BackgroundColor="LightSkyBlue">
-    <ContentView>
+       <ContentView>
               <StackLayout Padding="20"
                            VerticalOptions="Center">
 
 
-                     <Label Text="A DICIONAR DIVIDAS"
+                     <Label Text="A DICIONAR A RECEBER"
                             BackgroundColor="Gray"
                             HorizontalOptions="Center"
                             Padding="5"/>

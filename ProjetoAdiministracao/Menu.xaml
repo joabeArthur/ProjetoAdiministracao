@@ -25,7 +25,7 @@
                                 TextColor="Black"
                                 Clicked="Dividas"/>
 
-                        <Button Text="Recibo"
+                        <Button Text="A receber"
                                 BackgroundColor="LightSkyBlue"
                                 TextColor="Black"
                                 Clicked="Recibo"/>

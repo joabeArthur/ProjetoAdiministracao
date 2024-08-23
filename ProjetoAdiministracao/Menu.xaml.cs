@@ -16,7 +16,7 @@ namespace ProjetoAdiministracao
 
 	private void Recibo(object sender, EventArgs args)
 	{
-		Application.Current.MainPage = new Recibo();
+		Application.Current.MainPage = new AReceberPage();
 	}
 
     private void Funcionarios(object sender, EventArgs args)

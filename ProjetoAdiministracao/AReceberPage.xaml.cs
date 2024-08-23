@@ -4,33 +4,32 @@ using System;
 
 namespace ProjetoAdiministracao;
 
-public partial class Dividas : ContentPage
+public partial class AReceberPage : ContentPage
 {
     CadastroFuncionarios cf;
-    Divida divida;
-    DividasControle dividasControle;
-
-    public Dividas()
+    AReceber receber;
+    AReceberControle receberControle;
+    public AReceberPage()
     {
         InitializeComponent();
         cf = new CadastroFuncionarios();
-        divida = new Divida();
-        dividasControle = new DividasControle();
-        ListaDivida.ItemsSource = dividasControle.LerTodos();
+        receber = new AReceber();
+        receberControle = new AReceberControle();
+        ListaAReceberPage.ItemsSource = receberControle.LerTodos();
     }
 
     private void SelecionarNaTelaFuncionarios(object sender, EventArgs e)
     {
-        Application.Current.MainPage = new DicionarDividas();
+        Application.Current.MainPage = new DicionarAReceber();
     }
     //-----------------------------Comprender o do professor-----------------------\\
 
 
     void QuandoSelecionarUmItemNaLista(object sender, SelectedItemChangedEventArgs e)
     {
-        var page = new DicionarDividas();
+        var page = new DicionarAReceber();
 
-        page.divida = e.SelectedItem as Divida;
+        page.receber = e.SelectedItem as AReceber;
 
         Application.Current.MainPage = page;
     }

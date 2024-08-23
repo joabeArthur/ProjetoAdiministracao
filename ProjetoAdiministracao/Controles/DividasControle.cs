@@ -6,7 +6,7 @@ namespace ProjetoAdiministracao;
 public class DividasControle : BaseControle
 {
   //----------------------------------------------------------------------------
-  Conversor conversor;
+
   public DividasControle() : base()
   {
     NomeDaTabela = "Divida";
@@ -24,7 +24,6 @@ public class DividasControle : BaseControle
 
   public virtual List<Divida>? LerTodos()
   {
-    conversor.ConverterDividasParaClientes();
     var tabela = liteDB.GetCollection<Divida>(NomeDaTabela);
     return new List<Divida>(tabela.FindAll());
   }
