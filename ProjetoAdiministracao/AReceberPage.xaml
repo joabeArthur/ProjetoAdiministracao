@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.AReceberPage"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="LightSkyBlue">
+             BackgroundColor="Gray">
 
        <Grid>
 
@@ -29,26 +29,33 @@
                       Text="Adicionar"
                       FontSize="20"
                       HorizontalOptions="Center"
+                      VerticalOptions="CenterAndExpand"
                       Margin="40,0,40,40"
-                      Grid.Row="0"
-                      Grid.Column="2"
-                      Grid.ColumnSpan="2"/>
+                      Grid.Row="1"
+                      Grid.Column="1"
+                      Grid.ColumnSpan="2"
+                      BackgroundColor="Black"/>
 
               <Button Text="Voltar"
                       Clicked="Voltar"
                       FontSize="20"
                       HorizontalOptions="Center"
+                      VerticalOptions="CenterAndExpand"
                       Margin="40,0,40,40"
                       Grid.Row="1"
-                      Grid.Column="2"
-                      Grid.ColumnSpan="2"/>
+                      Grid.Column="4"
+                      Grid.ColumnSpan="2"
+                      BackgroundColor="Black"/>
 
               <Label Text="A receber"
-                     BackgroundColor="White"
+                     FontSize="50"
+                     Margin="40,0,40,40"
                      HorizontalOptions="Center"
-                     Padding="5"
+                     VerticalOptions="CenterAndExpand"
                      Grid.Row="0"
-                     Grid.Column="1"/>
+                     Grid.RowSpan="2"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="4"/>
 
               <ListView x:Name="ListaAReceberPage"
                         HasUnevenRows="True"
@@ -65,7 +72,7 @@
                                    <ViewCell>
 
                                           <VerticalStackLayout Margin="47"
-                                                               BackgroundColor="Gray"
+                                                               BackgroundColor="LightGray"
                                                                HorizontalOptions="FillAndExpand"
                                                                VerticalOptions="FillAndExpand"
                                                                Grid.Row="2"

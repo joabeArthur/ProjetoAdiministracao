@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.MainPage"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="DodgerBlue">
+             BackgroundColor="Gray">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -22,11 +22,12 @@
                WidthRequest="200"/>
 
         <Label Text="CROW"
-               Grid.Row="1"
+               Grid.Row="0"
+               Grid.RowSpan="2"
                HorizontalOptions="Center"
                VerticalOptions="Center"
                FontAttributes="Bold"
-               FontSize="24"
+               FontSize="70"
                TextColor="White" />
 
         <StackLayout Grid.Row="3"
@@ -35,14 +36,14 @@
             <Button Text="FAZER LOGIN"
                     WidthRequest="200"
                     HeightRequest="50"
-                    BackgroundColor="Silver"
+                    BackgroundColor="LightGray"
                     TextColor="Black"
                     Clicked="Login"/>
 
             <Button Text="CADASTRAR"
                     WidthRequest="200"
                     HeightRequest="50"
-                    BackgroundColor="Silver"
+                    BackgroundColor="LightGray"
                     TextColor="Black"
                     Clicked="Cadastro"
                     Margin="0,20,0,0"/>

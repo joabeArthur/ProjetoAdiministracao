@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.CadastroFuncionarios"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="LightSkyBlue">
+             BackgroundColor="Gray">
 
        <ContentView>
               <StackLayout Padding="20"
@@ -11,12 +11,12 @@
 
 
                      <Label Text="CADASTRO DE FUNCIONARIOS"
-                            BackgroundColor="White"
                             HorizontalOptions="Center"
-                            Padding="5"/>
+                            Padding="5"
+                            FontSize="50"/>
 
 
-                     <Frame BackgroundColor="White"
+                     <Frame BackgroundColor="LightGray"
                             Padding="10"
                             Margin="0,20,0,20">
                             <StackLayout> 
@@ -78,13 +78,13 @@
                                                 Margin="0,10,0,0">
 
                                           <Button Text="Limpar"
-                                                  BackgroundColor="LightSkyBlue"
+                                                  BackgroundColor="Black"
                                                   Clicked="Apagar"/>
                                           <Button Text="🗑️"
-                                                  BackgroundColor="LightSkyBlue"
+                                                  BackgroundColor="Black"
                                                   Clicked="Excluir"/>
                                           <Button Text="✔"
-                                                  BackgroundColor="SkyBlue"
+                                                  BackgroundColor="Black"
                                                   Clicked="Salvar"/>
 
                                    </StackLayout>
@@ -104,6 +104,7 @@
                                                          Clicked="TentarDeNovo"
                                                          Text="Tentar de novo"
                                                          VerticalOptions="End"
+                                                         BackgroundColor="Black"
                                                          HorizontalOptions="Center"/>
 
                                           </StackLayout>
@@ -122,11 +123,13 @@
 
                                                  <Button Clicked="Certeza"
                                                          Text="Excluir"
+                                                         BackgroundColor="Black"
                                                          VerticalOptions="End"
                                                          HorizontalOptions="Center"/>
 
                                                  <Button Clicked="NaoExcluir"
                                                          Text="Cancelar"
+                                                         BackgroundColor="Black"
                                                          VerticalOptions="End"
                                                          HorizontalOptions="Center"/>
 
@@ -137,7 +140,7 @@
 
 
                      <Button Text="Voltar"
-                             BackgroundColor="LightCyan"
+                             BackgroundColor="Black"
                              HorizontalOptions="Center"
                              Clicked="Voltar"/>
 

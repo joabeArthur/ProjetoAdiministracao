@@ -166,7 +166,7 @@ public partial class CadastroFuncionarios : ContentPage
 
   private void Voltar(object sender, EventArgs e)
   {
-    Application.Current.MainPage = new Menu();
+    Application.Current.MainPage = new Funcionarios();
   }
 }
 

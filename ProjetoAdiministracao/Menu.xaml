@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.Menu"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="DodgerBlue">
+             BackgroundColor="Gray">
         <Grid>
                 <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -16,27 +16,27 @@
                                 Spacing="10">
 
                         <Button Text="Funcionarios"
-                                BackgroundColor="LightSkyBlue"
+                                BackgroundColor="LightGray"
                                 TextColor="Black"
                                 Clicked="Funcionarios"/>
 
                         <Button Text="Dividas"
-                                BackgroundColor="LightSkyBlue"
+                                BackgroundColor="LightGray"
                                 TextColor="Black"
                                 Clicked="Dividas"/>
 
                         <Button Text="A receber"
-                                BackgroundColor="LightSkyBlue"
+                                BackgroundColor="LightGray"
                                 TextColor="Black"
                                 Clicked="Recibo"/>
 
                 </StackLayout>
 
-             <!--   <StackLayout Grid.Column="1"
+              <!--  <StackLayout Grid.Column="1"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center">
 
-                        <Image Source="caminho/para/sua/imagem.png"
+                        <Image Source="Resources\Images\reaven-removebg-preview.png"
                                         WidthRequest="200"
                                         HeightRequest="200"/>
                 </StackLayout> -->

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoAdiministracao.Cadastro"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="DodgerBlue">
+             BackgroundColor="Gray">
 
     <StackLayout HorizontalOptions="Center" 
                  VerticalOptions="Center">
@@ -34,8 +34,8 @@
                Margin="0,20,0,20"/>
 
         <Button Text="Confirmar" 
-                BackgroundColor="LightSkyBlue"
-                TextColor="Black"
+                BackgroundColor="Black"
+                TextColor="White"
                 WidthRequest="150"
                 HorizontalOptions="Center"
                 Clicked="Confirmar"/>
@@ -64,7 +64,9 @@
 
                                    <Button x:Name="BotaoDeCadastro"
                                            Clicked="TentarDeNovo"
+                                           BackgroundColor="Black"
                                            Text="Tentar de novo"
+                                           TextColor="White"
                                            Grid.Row="2"
                                            Grid.Column="1"/>
                      </Grid>
