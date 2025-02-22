@@ -22,8 +22,6 @@ public partial class Funcionarios : ContentPage
     {
         Application.Current.MainPage = new CadastroFuncionarios();
     }
-//-----------------------------Comprender o do professor-----------------------\\
-  
 
     void QuandoSelecionarUmItemNaLista(object sender, SelectedItemChangedEventArgs e)
     {
@@ -33,8 +31,6 @@ public partial class Funcionarios : ContentPage
        
         Application.Current.MainPage = page;
     }
-
-//-----------------------------Comprender o do professor-----------------------\\
 
     private void Voltar(object sender, EventArgs e)
     {
