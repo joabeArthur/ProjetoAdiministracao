@@ -22,8 +22,6 @@ public partial class AReceberPage : ContentPage
     {
         Application.Current.MainPage = new DicionarAReceber();
     }
-    //-----------------------------Comprender o do professor-----------------------\\
-
 
     void QuandoSelecionarUmItemNaLista(object sender, SelectedItemChangedEventArgs e)
     {
@@ -33,8 +31,6 @@ public partial class AReceberPage : ContentPage
 
         Application.Current.MainPage = page;
     }
-
-    //-----------------------------Comprender o do professor-----------------------\\
 
     private void Voltar(object sender, EventArgs e)
     {
