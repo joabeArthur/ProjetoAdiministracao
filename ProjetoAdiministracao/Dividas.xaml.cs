@@ -23,8 +23,6 @@ public partial class Dividas : ContentPage
     {
         Application.Current.MainPage = new DicionarDividas();
     }
-    //-----------------------------Comprender o do professor-----------------------\\
-
 
     void QuandoSelecionarUmItemNaLista(object sender, SelectedItemChangedEventArgs e)
     {
@@ -34,8 +32,6 @@ public partial class Dividas : ContentPage
 
         Application.Current.MainPage = page;
     }
-
-    //-----------------------------Comprender o do professor-----------------------\\
 
     private void Voltar(object sender, EventArgs e)
     {
